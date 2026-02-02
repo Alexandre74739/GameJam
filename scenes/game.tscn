@@ -308,13 +308,30 @@ texture = ExtResource("1_uwrxv")
 [sub_resource type="TileSet" id="TileSet_lbhrr"]
 sources/0 = SubResource("TileSetAtlasSource_lnu2h")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vtaks"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.07058824, 0.07058824, 0.06666667, 0.78431374)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.8, 0.8, 0.8, 0.7058824)
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+shadow_color = Color(0, 0, 0, 0.39215687)
+
 [sub_resource type="LabelSettings" id="LabelSettings_vtaks"]
 font = ExtResource("10_vtaks")
-font_size = 32
+font_size = 24
 
 [sub_resource type="LabelSettings" id="LabelSettings_kvpfn"]
 font = ExtResource("10_vtaks")
-font_size = 32
+font_size = 24
 
 [node name="Game" type="Node2D" unique_id=1053242947]
 script = ExtResource("1_0tnpc")
@@ -455,18 +472,32 @@ position = Vector2(-46, 134)
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1250093064]
 
-[node name="Templabel" type="Label" parent="UI" unique_id=623481423]
-offset_right = 40.0
-offset_bottom = 23.0
-label_settings = SubResource("LabelSettings_vtaks")
-
-[node name="InfoLabel" type="Label" parent="UI" unique_id=1144779895]
-offset_right = 40.0
-offset_bottom = 23.0
-label_settings = SubResource("LabelSettings_kvpfn")
-
 [node name="TempTimer" type="Timer" parent="UI" unique_id=1409723408]
 autostart = true
+
+[node name="HUD_Cadre" type="PanelContainer" parent="UI" unique_id=140393055]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -29.5
+offset_right = 29.5
+offset_bottom = 89.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vtaks")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/HUD_Cadre" unique_id=1698013146]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Templabel" type="Label" parent="UI/HUD_Cadre/VBoxContainer" unique_id=623481423]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_vtaks")
+horizontal_alignment = 1
+
+[node name="InfoLabel" type="Label" parent="UI/HUD_Cadre/VBoxContainer" unique_id=1144779895]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_kvpfn")
+horizontal_alignment = 1
 
 [connection signal="body_entered" from="Coin" to="Player" method="_on_coin_body_entered"]
 [connection signal="body_entered" from="Coin" to="Coin" method="_on_body_entered"]

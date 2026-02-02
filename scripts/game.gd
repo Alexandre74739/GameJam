@@ -2,17 +2,16 @@ extends Node2D
 
 var temperature : int = 0 
 
-# Correction du chemin selon ton arbre de scène
-@onready var temp_label = $UI/Templabel
-@onready var info_label = $UI/InfoLabel # Le nouveau label indicatif
+# Chemins mis à jour selon la structure VBoxContainer
+@onready var temp_label = $UI/HUD_Cadre/VBoxContainer/Templabel
+@onready var info_label = $UI/HUD_Cadre/VBoxContainer/InfoLabel
 @onready var map_chaude = $MapChaude
 
 func _ready() -> void:
-	# On initialise l'affichage
 	update_temp_display()
 
 func _on_temp_timer_timeout() -> void:
-	# Évolution selon la map active
+	# Évolution selon quelle map est au premier plan
 	if map_chaude.z_index >= 0:
 		temperature += 1
 	else:
@@ -24,23 +23,21 @@ func _on_temp_timer_timeout() -> void:
 		die()
 
 func update_temp_display():
-	if temp_label == null: return # Sécurité contre le crash
+	if temp_label == null: return
 	
 	temp_label.text = str(temperature) + "°C"
 	
-	# Gestion des couleurs et des phrases indicatives
+	# Gestion sélective des couleurs (Uniquement sur temp_label)
 	if temperature >= 40:
 		temp_label.modulate = Color.RED
 		info_label.text = "ALERTE : CHALEUR CRITIQUE !"
-		info_label.modulate = Color.RED
 	elif temperature <= -10:
 		temp_label.modulate = Color.DARK_BLUE
 		info_label.text = "ALERTE : FROID GLACIAL !"
-		info_label.modulate = Color.DARK_BLUE
 	else:
 		temp_label.modulate = Color.WHITE
 		info_label.text = "Température stable"
-		info_label.modulate = Color.WHITE
 
 func die():
+	print("Mort par température !")
 	get_tree().reload_current_scene()
