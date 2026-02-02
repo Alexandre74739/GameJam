@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dy8c06kynuvf8" path="res://scenes/platform_froid.tscn" id="5_iywne"]
 [ext_resource type="AudioStream" uid="uid://b4jleospumrdk" path="res://assets/music/The Promised Neverland - Isabella’s Lullaby (Hip Hop Trap REMIX).mp3" id="6_u5sy4"]
 [ext_resource type="AudioStream" uid="uid://c8u5iwtj57c7d" path="res://assets/sounds/coin.wav" id="7_gee14"]
+[ext_resource type="PackedScene" uid="uid://cj228tfjd1h4r" path="res://scenes/kill_zone.tscn" id="8_gee14"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e2o6t"]
 texture = ExtResource("1_uwrxv")
@@ -437,6 +438,9 @@ autoplay = true
 
 [node name="MusicCoin" type="AudioStreamPlayer2D" parent="." unique_id=802840782]
 stream = ExtResource("7_gee14")
+
+[node name="KillZone" parent="." unique_id=1881131918 instance=ExtResource("8_gee14")]
+position = Vector2(-46, 134)
 
 [connection signal="body_entered" from="Coin" to="Player" method="_on_coin_body_entered"]
 [connection signal="body_entered" from="Coin" to="Coin" method="_on_body_entered"]
