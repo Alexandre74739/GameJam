@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://6wu36accco3t" path="res://assets/sprites/main-character.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://jesxfp6jwwli" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="AudioStream" uid="uid://be3x2u7dtkxcy" path="res://assets/sounds/tap-epee.mp3" id="3_qhqgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
 atlas = ExtResource("1_3vyb7")
@@ -219,8 +220,11 @@ script = ExtResource("1_g2els")
 sprite_frames = SubResource("SpriteFrames_dqkch")
 animation = &"walk"
 autoplay = "idle"
-frame_progress = 0.8770818
+frame_progress = 0.35658783
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=750427530]
 position = Vector2(-1, 2)
 shape = SubResource("CapsuleShape2D_qlg0r")
+
+[node name="SfxAttaque" type="AudioStreamPlayer2D" parent="." unique_id=597424677]
+stream = ExtResource("3_qhqgy")
