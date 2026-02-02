@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://qjoo18wmlyce" path="res://scenes/coin.tscn" id="3_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://cj0bfwb42hw34" path="res://scenes/platform_chaud.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://dy8c06kynuvf8" path="res://scenes/platform_froid.tscn" id="5_iywne"]
+[ext_resource type="AudioStream" uid="uid://b4jleospumrdk" path="res://assets/music/The Promised Neverland - Isabella’s Lullaby (Hip Hop Trap REMIX).mp3" id="6_u5sy4"]
+[ext_resource type="AudioStream" uid="uid://c8u5iwtj57c7d" path="res://assets/sounds/coin.wav" id="7_gee14"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e2o6t"]
 texture = ExtResource("1_uwrxv")
@@ -430,8 +432,11 @@ z_index = 5
 position = Vector2(152, -142)
 
 [node name="MusicGenerale" type="AudioStreamPlayer2D" parent="." unique_id=1952870638]
+stream = ExtResource("6_u5sy4")
+autoplay = true
 
 [node name="MusicCoin" type="AudioStreamPlayer2D" parent="." unique_id=802840782]
+stream = ExtResource("7_gee14")
 
 [connection signal="body_entered" from="Coin" to="Player" method="_on_coin_body_entered"]
 [connection signal="body_entered" from="Coin" to="Coin" method="_on_body_entered"]
