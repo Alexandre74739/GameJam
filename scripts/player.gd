@@ -51,3 +51,7 @@ func attack_action():
 	# On attend la fin de l'animation d'attaque
 	await _animated_sprite.animation_finished
 	is_attacking = false
+
+
+func _on_coin_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
