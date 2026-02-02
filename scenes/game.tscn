@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://durc4x7dmglmm"]
 
+[ext_resource type="Script" uid="uid://cwd4q48rgtjdt" path="res://scripts/game.gd" id="1_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://b12xlubjyw83k" path="res://assets/sprites/world_tileset.png" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://j54lupoylhq8" path="res://scenes/player.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://qjoo18wmlyce" path="res://scenes/coin.tscn" id="3_lbhrr"]
@@ -8,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://b4jleospumrdk" path="res://assets/music/The Promised Neverland - Isabella’s Lullaby (Hip Hop Trap REMIX).mp3" id="6_u5sy4"]
 [ext_resource type="AudioStream" uid="uid://c8u5iwtj57c7d" path="res://assets/sounds/coin.wav" id="7_gee14"]
 [ext_resource type="PackedScene" uid="uid://cj228tfjd1h4r" path="res://scenes/kill_zone.tscn" id="8_gee14"]
+[ext_resource type="FontFile" uid="uid://kse5k46uoweq" path="res://assets/fonts/PixelOperator8.ttf" id="10_vtaks"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e2o6t"]
 texture = ExtResource("1_uwrxv")
@@ -306,7 +308,16 @@ texture = ExtResource("1_uwrxv")
 [sub_resource type="TileSet" id="TileSet_lbhrr"]
 sources/0 = SubResource("TileSetAtlasSource_lnu2h")
 
+[sub_resource type="LabelSettings" id="LabelSettings_vtaks"]
+font = ExtResource("10_vtaks")
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_kvpfn"]
+font = ExtResource("10_vtaks")
+font_size = 32
+
 [node name="Game" type="Node2D" unique_id=1053242947]
+script = ExtResource("1_0tnpc")
 
 [node name="MapChaude" type="TileMap" parent="." unique_id=83800898]
 tile_set = SubResource("TileSet_feb5d")
@@ -432,15 +443,31 @@ zoom = Vector2(4, 4)
 z_index = 5
 position = Vector2(152, -142)
 
+[node name="MusicCoin" type="AudioStreamPlayer2D" parent="." unique_id=802840782]
+stream = ExtResource("7_gee14")
+
 [node name="MusicGenerale" type="AudioStreamPlayer2D" parent="." unique_id=1952870638]
 stream = ExtResource("6_u5sy4")
 autoplay = true
 
-[node name="MusicCoin" type="AudioStreamPlayer2D" parent="." unique_id=802840782]
-stream = ExtResource("7_gee14")
-
 [node name="KillZone" parent="." unique_id=1881131918 instance=ExtResource("8_gee14")]
 position = Vector2(-46, 134)
 
+[node name="UI" type="CanvasLayer" parent="." unique_id=1250093064]
+
+[node name="Templabel" type="Label" parent="UI" unique_id=623481423]
+offset_right = 40.0
+offset_bottom = 23.0
+label_settings = SubResource("LabelSettings_vtaks")
+
+[node name="InfoLabel" type="Label" parent="UI" unique_id=1144779895]
+offset_right = 40.0
+offset_bottom = 23.0
+label_settings = SubResource("LabelSettings_kvpfn")
+
+[node name="TempTimer" type="Timer" parent="UI" unique_id=1409723408]
+autostart = true
+
 [connection signal="body_entered" from="Coin" to="Player" method="_on_coin_body_entered"]
 [connection signal="body_entered" from="Coin" to="Coin" method="_on_body_entered"]
+[connection signal="timeout" from="UI/TempTimer" to="." method="_on_temp_timer_timeout"]
