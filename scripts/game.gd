@@ -32,7 +32,7 @@ func update_temp_display():
 		temp_label.modulate = Color.RED
 		info_label.text = "ALERTE : CHALEUR CRITIQUE !"
 	elif temperature <= -10:
-		temp_label.modulate = Color.DARK_BLUE
+		temp_label.modulate = Color("#1e90ff")
 		info_label.text = "ALERTE : FROID GLACIAL !"
 	else:
 		temp_label.modulate = Color.WHITE
