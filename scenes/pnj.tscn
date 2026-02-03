@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://6pf6bokdsrhr"]
+
+[ext_resource type="Script" uid="uid://67n1rsc1rw4u" path="res://scripts/pnj.gd" id="1_g66xb"]
+[ext_resource type="Texture2D" uid="uid://gmjclx2lddf1" path="res://assets/sprites/PNG Sequences/Idle Blink/Feu_Idle Blinking_000.png" id="1_uno50"]
+[ext_resource type="Texture2D" uid="uid://mrv778gmngyc" path="res://assets/sprites/PNG Sequences/Idle Blink/Feu_Idle Blinking_001.png" id="2_5cxg5"]
+[ext_resource type="Texture2D" uid="uid://0t42toyqqy85" path="res://assets/sprites/PNG Sequences/Idle Blink/Feu_Idle Blinking_002.png" id="3_7fm3h"]
+[ext_resource type="Texture2D" uid="uid://bwcg4qhed7fgy" path="res://assets/sprites/PNG Sequences/Idle Blink/Feu_Idle Blinking_003.png" id="4_507x7"]
+[ext_resource type="Texture2D" uid="uid://b42wd30kr1p4v" path="res://assets/sprites/PNG Sequences/Idle Blink/Feu_Idle Blinking_004.png" id="5_xk4de"]
+[ext_resource type="Texture2D" uid="uid://v5mhg2d0lpos" path="res://assets/sprites/PNG Sequences/Idle Blink/Feu_Idle Blinking_005.png" id="6_2uv7e"]
+[ext_resource type="Texture2D" uid="uid://divaqktsgg54t" path="res://assets/sprites/PNG Sequences/Idle Blink/Feu_Idle Blinking_006.png" id="7_18orc"]
+[ext_resource type="Texture2D" uid="uid://dqobw3mksfqa2" path="res://assets/sprites/PNG Sequences/Idle Blink/Feu_Idle Blinking_007.png" id="8_5b3x2"]
+[ext_resource type="Texture2D" uid="uid://incdb6td3qbu" path="res://assets/sprites/PNG Sequences/Idle Blink/Feu_Idle Blinking_008.png" id="9_mr45j"]
+[ext_resource type="Texture2D" uid="uid://djo6jxo2p3la6" path="res://assets/sprites/PNG Sequences/Idle Blink/Feu_Idle Blinking_009.png" id="10_uhk7j"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6yugu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_uno50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5cxg5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7fm3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_507x7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xk4de")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2uv7e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_18orc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5b3x2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_mr45j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_uhk7j")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 12.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uno50"]
+radius = 7.0
+height = 28.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g66xb"]
+height = 32.0
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_g66xb"]
+
+[node name="PNJ" type="CharacterBody2D" unique_id=1810933666]
+z_index = 1
+script = ExtResource("1_g66xb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1184989489]
+position = Vector2(-6, -12)
+scale = Vector2(0.09312699, 0.095559455)
+sprite_frames = SubResource("SpriteFrames_6yugu")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.77784103
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=720533519]
+position = Vector2(-5, -12)
+shape = SubResource("CapsuleShape2D_uno50")
+
+[node name="Killzone" type="Area2D" parent="." unique_id=1455568463]
+position = Vector2(1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=352661622]
+position = Vector2(-6, -12)
+shape = SubResource("CapsuleShape2D_g66xb")
+
+[node name="RayCastRight" type="RayCast2D" parent="." unique_id=2036379148]
+position = Vector2(-5, -5)
+target_position = Vector2(10, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="." unique_id=853178582]
+position = Vector2(-5, -5)
+target_position = Vector2(-10, 0)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=680794123]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=706382744]
+navigation_polygon = SubResource("NavigationPolygon_g66xb")
+
+[connection signal="body_entered" from="Killzone" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Killzone" to="." method="_on_killzone_body_entered"]

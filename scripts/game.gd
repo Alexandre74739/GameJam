@@ -5,7 +5,7 @@ var temperature : int = 0
 # Chemins mis à jour selon la structure VBoxContainer
 @onready var temp_label = $UI/HUD_Cadre/VBoxContainer/Templabel
 @onready var info_label = $UI/HUD_Cadre/VBoxContainer/InfoLabel
-@onready var map_chaude = $MapChaude
+@onready var map_chaude = $NavigationRegion2D/MapChaude
 
 func _ready() -> void:
 	update_temp_display()

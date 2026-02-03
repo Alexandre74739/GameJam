@@ -1,47 +1,52 @@
 extends CharacterBody2D
+class_name Player
 
 const SPEED = 120.0
 const JUMP_VELOCITY = -300.0
 
 @onready var _animated_sprite = $AnimatedSprite2D
-# On récupère le nœud audio pour le son de l'épée
 @onready var sfx_attaque = $SfxAttaque 
+@onready var attack_area = $AttackArea # Récupère ton nouveau nœud
 
 var is_attacking = false
+var is_dead = false 
 
 func _physics_process(delta: float) -> void:
-	# 1. Gestion de la Gravité
+	if is_dead: 
+		return # Empêche tout mouvement si mort
+
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-	# 2. Déclenchement de l'Attaque (Touche Espace / Action "attack")
+	# Lancement de l'attaque
 	if Input.is_action_just_pressed("attack") and not is_attacking:
 		attack_action()
 
-	# 3. Mouvement Horizontal
 	var direction := Input.get_axis("ui_left", "ui_right")
 	
-	# On permet le mouvement même en attaquant, mais on peut réduire la vitesse si on veut
-	if direction:
+	if direction and not is_attacking: # On bloque le déplacement pendant l'attaque pour plus de réalisme
 		velocity.x = direction * SPEED
 		_animated_sprite.flip_h = direction < 0
+		# On oriente la zone d'attaque selon la direction du regard
+		attack_area.scale.x = -1 if direction < 0 else 1
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
-	# 4. Gestion du Saut (Flèche du haut)
-	if Input.is_key_pressed(KEY_UP) and is_on_floor():
+	if Input.is_key_pressed(KEY_UP) and is_on_floor() and not is_attacking:
 		velocity.y = JUMP_VELOCITY
 
 	move_and_slide()
 	update_animations()
 
 func update_animations():
-	# PRIORITÉ 1 : L'animation d'attaque bloque les autres visuels
+	if is_dead:
+		_animated_sprite.play("death")
+		return
+		
 	if is_attacking:
 		_animated_sprite.play("attack")
 		return 
 	
-	# PRIORITÉ 2 : Animations de déplacement classiques
 	if not is_on_floor():
 		_animated_sprite.play("jump")
 	elif velocity.x != 0:
@@ -51,17 +56,36 @@ func update_animations():
 
 func attack_action():
 	is_attacking = true
-	
-	# Joue le bruitage "tap-eppe"
 	if sfx_attaque:
 		sfx_attaque.play()
 	
-	# On attend la fin de l'animation d'attaque avant de redonner la priorité aux autres
-	# Note : L'animation "attack" dans SpriteFrames ne doit pas être en boucle (Loop)
+	# ÉTAPE CRUCIALE : On active la zone d'attaque uniquement ici
+	attack_area.set_deferred("monitoring", true)
+	
 	await _animated_sprite.animation_finished
 	
+	# On éteint la zone après le coup
+	attack_area.set_deferred("monitoring", false)
 	is_attacking = false
 
-# Cette fonction peut rester vide si la logique est gérée dans le script du Coin
-func _on_coin_body_entered(_body: Node2D) -> void:
-	pass
+func die():
+	if is_dead: return 
+	is_dead = true
+	
+	velocity = Vector2.ZERO 
+	_animated_sprite.play("death") # Priorité absolue dans update_animations
+	
+	# On désactive les collisions avec les ennemis pour ne pas mourir en boucle
+	set_collision_layer_value(1, false) 
+	
+	await get_tree().create_timer(3).timeout
+	call_deferred("reset_game")
+
+func reset_game():
+	get_tree().reload_current_scene()
+
+# Assure-toi que ce signal est bien connecté dans l'éditeur
+func _on_attack_area_body_entered(body: Node2D) -> void:
+	if body is Ennemy: 
+		print("Ennemi touché !")
+		body.die_pnj() # Appelle la mort du PNJ

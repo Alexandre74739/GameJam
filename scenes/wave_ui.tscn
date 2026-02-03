@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://cdn7fy2el0h70"]
+
+[ext_resource type="FontFile" uid="uid://kse5k46uoweq" path="res://assets/fonts/PixelOperator8.ttf" id="2_ke5q7"]
+
+[sub_resource type="GDScript" id="GDScript_80xi8"]
+script/source = "extends CanvasLayer
+
+# Correction des chemins selon ton arbre
+@onready var wave_label = $MarginContainer/VBoxContainer/WaveLabel
+@onready var enemies_label = $MarginContainer/VBoxContainer/EnemiesLabel
+
+var wave_manager
+
+func _ready():
+	# Attente d'une frame pour s'assurer que le Singleton est prêt
+	await get_tree().process_frame 
+	
+	wave_manager = get_node_or_null(\"/root/WaveManager\")
+	
+	if wave_manager:
+		# On connecte le signal pour ne mettre à jour que quand c'est utile
+		wave_manager.wave_changed.connect(_on_wave_changed)
+		print(\"✅ WaveUI connectée\")
+		update_ui() # Premier affichage
+	else:
+		push_error(\"❌ WaveManager introuvable ! Vérifie tes Autoloads.\")
+
+# SUPPRESSION de func _process(_delta) : On utilise les signaux à la place.
+
+func _on_wave_changed(_wave_number):
+	update_ui()
+
+func update_ui():
+	# Sécurité pour éviter le crash \"null instance\"
+	if wave_manager and wave_label and enemies_label:
+		wave_label.text = \"VAGUE : \" + str(wave_manager.current_wave)
+		enemies_label.text = \"Ennemis : \" + str(wave_manager.enemies_alive)
+"
+
+[node name="WaveUI" type="CanvasLayer" unique_id=1403392430]
+script = SubResource("GDScript_80xi8")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1143827860]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=511177358]
+layout_mode = 2
+
+[node name="WaveLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=950183162]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ke5q7")
+text = "Vague : 0"
+
+[node name="EnnemiesLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2138266245]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ke5q7")
+text = "Ennemis : 0"
