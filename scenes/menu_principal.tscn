@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dlyauu62y1mhx"]
+
+[ext_resource type="Script" uid="uid://b32ifa8bwrlwi" path="res://scripts/menu_principal.gd" id="1_i85hu"]
+
+[node name="MenuPrincipal" type="Control" unique_id=114411050]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i85hu")
+
+[node name="Background" type="TextureRect" parent="." unique_id=322862613]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Title" type="Label" parent="." unique_id=598309336]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1950997575]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PlayButton" type="Button" parent="VBoxContainer" unique_id=717367366]
+layout_mode = 2
+text = "Play"
+
+[node name="RulesButton" type="Button" parent="VBoxContainer" unique_id=1738199419]
+layout_mode = 2
+
+[node name="RulesPanel" type="Panel" parent="." unique_id=1613240810]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/RulesButton" to="." method="_on_rules_button_pressed"]
