@@ -20,7 +20,7 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 
 [autoload]
 
-wave_manager="*uid://lok1x2e7pi3y"
+WaveManager="*uid://lok1x2e7pi3y"
 
 [input]
 

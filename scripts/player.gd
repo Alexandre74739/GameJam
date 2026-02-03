@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Player
 
 const SPEED = 120.0
 const JUMP_VELOCITY = -300.0
@@ -71,3 +72,8 @@ func attack_action():
 		sfx_attaque.play()
 	await _animated_sprite.animation_finished
 	is_attacking = false
+
+func _on_attack_area_body_entered(body: Node2D) -> void:
+	# Si on touche un ennemi pendant l'attaque
+	if body is Ennemy:
+		body.die_pnj()

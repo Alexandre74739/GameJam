@@ -57,6 +57,8 @@ height = 28.0
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g66xb"]
 height = 32.0
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_g66xb"]
+
 [node name="PNJ" type="CharacterBody2D" unique_id=1810933666]
 z_index = 1
 script = ExtResource("1_g66xb")
@@ -88,4 +90,10 @@ target_position = Vector2(10, 0)
 position = Vector2(-5, -5)
 target_position = Vector2(-10, 0)
 
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=680794123]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=706382744]
+navigation_polygon = SubResource("NavigationPolygon_g66xb")
+
 [connection signal="body_entered" from="Killzone" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Killzone" to="." method="_on_killzone_body_entered"]
