@@ -274,13 +274,17 @@ animations = [{
 radius = 7.0
 height = 28.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qhqgy"]
+radius = 15.0
+height = 34.0
+
 [node name="Player" type="CharacterBody2D" unique_id=1712431102]
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1293317599]
 position = Vector2(-1, 0)
 sprite_frames = SubResource("SpriteFrames_dqkch")
-animation = &"death"
+animation = &"attack"
 autoplay = "idle"
 frame = 7
 frame_progress = 1.0
@@ -291,3 +295,12 @@ shape = SubResource("CapsuleShape2D_qlg0r")
 
 [node name="SfxAttaque" type="AudioStreamPlayer2D" parent="." unique_id=597424677]
 stream = ExtResource("3_qhqgy")
+
+[node name="AttackArea" type="Area2D" parent="." unique_id=1230640618]
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=1738087871]
+position = Vector2(5, 1)
+shape = SubResource("CapsuleShape2D_qhqgy")
+
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
