@@ -56,8 +56,8 @@ func die():
 	velocity = Vector2.ZERO # Arrête le mouvement
 	_animated_sprite.play("death") # Lance l'animation
 	
-	# Attendre la fin de l'animation ou un timer
-	await get_tree().create_timer(0.6).timeout
+	# Attendre la fin de l'animation
+	await get_tree().create_timer(3).timeout
 	
 	# FIX CRASH : call_deferred pour recharger la scène proprement
 	call_deferred("reset_game")

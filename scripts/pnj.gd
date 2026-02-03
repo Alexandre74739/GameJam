@@ -1,38 +1,42 @@
 extends CharacterBody2D
 
-@export var speed = 70.0 # Vitesse réduite pour plus de jouabilité
-@export var jump_velocity = -300.0
-@onready var nav_agent = $NavigationAgent2D
-@onready var player = get_tree().root.find_child("Player", true, false)
-
+const SPEED = 60
+var direction = 1
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+@onready var ray_cast_right = $RayCastRight
+@onready var ray_cast_left = $RayCastLeft
+@onready var animated_sprite = $AnimatedSprite2D
+
 func _physics_process(delta):
-	# 1. Appliquer la gravité
+	# 1. Gestion de la gravité
 	if not is_on_floor():
 		velocity.y += gravity * delta
+	
+	# 2. Détection du vide (Mort du PNJ)
+	# Si la position Y dépasse une certaine limite (ex: 500), le PNJ meurt
+	if global_position.y > 500: 
+		die_pnj()
 
-	# 2. IA de poursuite
-	if player:
-		# Mise à jour de la cible pour le pathfinding
-		nav_agent.target_position = player.global_position
-		
-		# Calcul du chemin (nécessite d'avoir cliqué sur "Précalculer")
-		var next_path_pos = nav_agent.get_next_path_position()
-		var direction = global_position.direction_to(next_path_pos)
-		
-		velocity.x = direction.x * speed
-		
-		# Logique de saut automatique
-		if is_on_wall() and is_on_floor():
-			velocity.y = jump_velocity
-
+	# 3. Détection des murs pour changer de direction
+	if ray_cast_right.is_colliding():
+		direction = -1
+		animated_sprite.flip_h = true
+	elif ray_cast_left.is_colliding():
+		direction = 1
+		animated_sprite.flip_h = false
+	
+	# 4. Application du mouvement
+	velocity.x = direction * SPEED
 	move_and_slide()
 
-# --- LES FONCTIONS DE DÉTECTION DOIVENT ÊTRE EN DEHORS DE _PHYSICS_PROCESS ---
+# Fonction pour la mort du PNJ
+func die_pnj():
+	print("mort pnj")
+	queue_free() # Supprime le PNJ du jeu
 
+# Détection du joueur via l'Area2D
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
-		# On vérifie que le joueur possède bien la fonction die() pour éviter un crash
 		if body.has_method("die"):
-			body.die()
+			body.die() # Déclenche la mort du joueur (avec l'attente de 3s)

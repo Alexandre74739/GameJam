@@ -50,8 +50,9 @@ animations = [{
 "speed": 12.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g66xb"]
-size = Vector2(15, 28)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uno50"]
+radius = 7.0
+height = 28.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g66xb"]
 radius = 7.0
@@ -61,25 +62,31 @@ height = 28.0
 z_index = 1
 script = ExtResource("1_g66xb")
 
-[node name="Ennemi" type="AnimatedSprite2D" parent="." unique_id=1184989489]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1184989489]
 position = Vector2(-6, -12)
 scale = Vector2(0.09312699, 0.095559455)
 sprite_frames = SubResource("SpriteFrames_6yugu")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.56770915
+frame_progress = 0.77784103
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1009362514]
-position = Vector2(-5.5, -12)
-shape = SubResource("RectangleShape2D_g66xb")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=720533519]
+position = Vector2(-5, -12)
+shape = SubResource("CapsuleShape2D_uno50")
 
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=2052860392]
-
-[node name="Area2D" type="Area2D" parent="." unique_id=1455568463]
+[node name="Killzone" type="Area2D" parent="." unique_id=1455568463]
 position = Vector2(1, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=352661622]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=352661622]
 position = Vector2(-6, -12)
 shape = SubResource("CapsuleShape2D_g66xb")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[node name="RayCastRight" type="RayCast2D" parent="." unique_id=2036379148]
+position = Vector2(-5, -5)
+target_position = Vector2(10, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="." unique_id=853178582]
+position = Vector2(-5, -5)
+target_position = Vector2(-10, 0)
+
+[connection signal="body_entered" from="Killzone" to="." method="_on_area_2d_body_entered"]
