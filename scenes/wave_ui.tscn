@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cdn7fy2el0h70"]
+
+[ext_resource type="Script" uid="uid://dye2jrwfko7ds" path="res://scripts/wave_ui.gd" id="1_3be7j"]
+[ext_resource type="FontFile" uid="uid://kse5k46uoweq" path="res://assets/fonts/PixelOperator8.ttf" id="2_ke5q7"]
+
+[node name="WaveUI" type="CanvasLayer" unique_id=1403392430]
+script = ExtResource("1_3be7j")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1143827860]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=511177358]
+layout_mode = 2
+
+[node name="WaveLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=950183162]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ke5q7")
+text = "Vague : 0"
+
+[node name="EnnemiesLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2138266245]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ke5q7")
+text = "Ennemis : 0"
