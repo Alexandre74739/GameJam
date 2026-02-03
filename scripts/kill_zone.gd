@@ -3,7 +3,7 @@ extends Area2D
 func _on_body_entered(body: Node2D) -> void:
 	# On vérifie si c'est bien le joueur qui est tombé
 	if body.name == "Player":
-		print("Le joueur est tombé !")
+		print("Le joueur est mort !")
 		die_and_restart()
 
 func die_and_restart():
