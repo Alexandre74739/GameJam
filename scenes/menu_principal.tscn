@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dlyauu62y1mhx"]
+[gd_scene format=3 uid="uid://kwbug6725jb2"]
 
 [ext_resource type="Script" uid="uid://b32ifa8bwrlwi" path="res://scripts/menu_principal.gd" id="1_i85hu"]
 
@@ -28,17 +28,31 @@ offset_bottom = 40.0
 
 [node name="PlayButton" type="Button" parent="VBoxContainer" unique_id=717367366]
 layout_mode = 2
-text = "Play"
+text = "Lancer la survie"
 
 [node name="RulesButton" type="Button" parent="VBoxContainer" unique_id=1738199419]
 layout_mode = 2
-text = "Rules"
+text = "Règles"
+
+[node name="BackButton" type="Button" parent="VBoxContainer" unique_id=1537580516]
+layout_mode = 2
+text = "Retour"
 
 [node name="RulesPanel" type="Panel" parent="." unique_id=1613240810]
-visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RulesPanel" unique_id=321526565]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="RulesPanel" unique_id=754904669]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Retour"
 
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/RulesButton" to="." method="_on_rules_button_pressed"]
