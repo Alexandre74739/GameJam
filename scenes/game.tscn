@@ -462,6 +462,7 @@ z_index = 2
 position = Vector2(112, -151)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=921511190]
+zoom = Vector2(4, 4)
 
 [node name="Coin" parent="." unique_id=910168236 instance=ExtResource("3_lbhrr")]
 z_index = 5
