@@ -530,15 +530,22 @@ position = Vector2(-7, -409)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=631671211]
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1683178325]
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer" unique_id=395528039]
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="KillCounter" type="Label" parent="CanvasLayer/MarginContainer" unique_id=197473793 groups=["HUD"]]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer" unique_id=1683178325]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+
+[node name="KillCounter" type="Label" parent="CanvasLayer/PanelContainer/MarginContainer" unique_id=197473793 groups=["HUD"]]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("10_vtaks")
 theme_override_font_sizes/font_size = 32
 text = "Ennemis vaincu : 0"
+horizontal_alignment = 1
+vertical_alignment = 1
 script = ExtResource("12_dinhu")
 
 [connection signal="body_entered" from="Levier" to="Player" method="_on_coin_body_entered"]
