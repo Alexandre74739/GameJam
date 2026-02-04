@@ -114,5 +114,7 @@ func die_pnj():
 	elif _animated_sprite.sprite_frames.has_animation("death"):
 		_animated_sprite.play("death")
 	
+	print(get_tree().get_nodes_in_group("HUD"))
+	get_tree().call_group("HUD", "add_kill")
 	await get_tree().create_timer(1).timeout
 	queue_free()
