@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dbofkm2ioh2x8"]
+
+[sub_resource type="Gradient" id="Gradient_vh6yt"]
+offsets = PackedFloat32Array(0, 0.012886598)
+colors = PackedColorArray(0, 0, 0, 1, 1, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ok2m6"]
+gradient = SubResource("Gradient_vh6yt")
+
+[node name="page-règles" type="Control" unique_id=317997942]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1951834309]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_ok2m6")
