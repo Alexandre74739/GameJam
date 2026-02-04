@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b12xlubjyw83k" path="res://assets/sprites/world_tileset.png" id="1_yjqpq"]
 [ext_resource type="PackedScene" uid="uid://j54lupoylhq8" path="res://scenes/player.tscn" id="2_4bx60"]
-[ext_resource type="PackedScene" path="res://scenes/pnj.tscn" id="3_4bx60"]
+[ext_resource type="PackedScene" uid="uid://6pf6bokdsrhr" path="res://scenes/pnj.tscn" id="3_4bx60"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yjqpq"]
 texture = ExtResource("1_yjqpq")
@@ -187,10 +187,34 @@ tracks/3/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("scène intro/PNJ:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2966, -25)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("scène intro/PNJ/AnimatedSprite2D:animation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle-cold"]
+}
 
 [sub_resource type="Animation" id="Animation_yjqpq"]
 resource_name = "arrivee_perso"
-length = 39.8
+length = 16.133333
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -222,7 +246,7 @@ tracks/2/path = NodePath("scène intro/ColorRect/Label:text")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(6.3, 7.5075684, 8.273272),
+"times": PackedFloat32Array(6.3, 7.5075684, 9),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": ["blablabalblabalblabalblabalbl", "2 eme phrase", "3 eme phrase "]
@@ -238,6 +262,30 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("scène intro/PNJ:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(10.009007, 13),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2966, -25), Vector2(2406, -25)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("scène intro/PNJ/AnimatedSprite2D:animation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(10),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle-cold"]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_i2l1n"]
@@ -296,12 +344,12 @@ text = "blablabalblabalblabalblabalbl"
 autowrap_mode = 2
 
 [node name="PNJ" parent="scène intro" unique_id=1810933666 instance=ExtResource("3_4bx60")]
-position = Vector2(3026, -25)
+position = Vector2(2966, -25)
 scale = Vector2(-1, 1)
 script = null
 
 [node name="AnimatedSprite2D" parent="scène intro/PNJ" index="0" unique_id=1184989489]
-frame_progress = 0.0
+frame_progress = 0.014708864
 
 [editable path="scène intro/Player2"]
 [editable path="scène intro/PNJ"]
