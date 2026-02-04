@@ -15,3 +15,8 @@ func _on_rules_button_pressed():
 
 func _on_back_button_pressed(): 
 	rules_panel.hide() # Cache le panneau
+	
+
+
+func _on_back_button_button_down() -> void:
+	get_tree().quit()
