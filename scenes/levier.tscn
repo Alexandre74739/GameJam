@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://qjoo18wmlyce"]
+
+[ext_resource type="Script" uid="uid://ct3ccdwdujpet" path="res://scripts/levier.gd" id="1_i64fm"]
+[ext_resource type="Texture2D" uid="uid://c3qu3pyhxrdkl" path="res://assets/sprites/Levier/Pose_1.png" id="2_d14el"]
+[ext_resource type="Texture2D" uid="uid://2ykp1ngcyvmd" path="res://assets/sprites/Levier/Pose_2.png" id="3_1ikuy"]
+[ext_resource type="Texture2D" uid="uid://2pg60m42hggb" path="res://assets/sprites/Levier/Pose_3.png" id="4_wnlwo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d14el"]
+size = Vector2(13, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ls27i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_d14el")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1ikuy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wnlwo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1ikuy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_d14el")
+}],
+"loop": false,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Levier" type="Area2D" unique_id=910168236]
+script = ExtResource("1_i64fm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1228390638]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_d14el")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1182632873]
+position = Vector2(2.524355e-29, -9.536743e-07)
+scale = Vector2(0.42463234, 0.37775734)
+sprite_frames = SubResource("SpriteFrames_ls27i")
+frame_progress = 0.848158
