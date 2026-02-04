@@ -469,9 +469,6 @@ zoom = Vector2(4, 4)
 z_index = 5
 position = Vector2(151, -134)
 
-[node name="MusicCoin" type="AudioStreamPlayer2D" parent="." unique_id=802840782]
-stream = ExtResource("7_dinhu")
-
 [node name="MusicGenerale" type="AudioStreamPlayer2D" parent="." unique_id=1952870638]
 stream = ExtResource("6_u5sy4")
 autoplay = true
