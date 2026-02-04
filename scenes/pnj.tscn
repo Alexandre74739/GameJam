@@ -3,17 +3,81 @@
 [ext_resource type="Script" uid="uid://67n1rsc1rw4u" path="res://scripts/pnj.gd" id="1_g66xb"]
 [ext_resource type="Texture2D" uid="uid://gmjclx2lddf1" path="res://assets/sprites/PNG Sequences/Idle Blink/Feu_Idle Blinking_000.png" id="1_uno50"]
 [ext_resource type="Texture2D" uid="uid://mrv778gmngyc" path="res://assets/sprites/PNG Sequences/Idle Blink/Feu_Idle Blinking_001.png" id="2_5cxg5"]
+[ext_resource type="Texture2D" uid="uid://ciyqgbf3f8xxi" path="res://assets/sprites/PNG Sequences/Dying/Feu_Dying_000.png" id="2_c3pdi"]
 [ext_resource type="Texture2D" uid="uid://0t42toyqqy85" path="res://assets/sprites/PNG Sequences/Idle Blink/Feu_Idle Blinking_002.png" id="3_7fm3h"]
+[ext_resource type="Texture2D" uid="uid://dfawaaoxvigrd" path="res://assets/sprites/PNG Sequences/Dying/Feu_Dying_001.png" id="3_efcp8"]
 [ext_resource type="Texture2D" uid="uid://bwcg4qhed7fgy" path="res://assets/sprites/PNG Sequences/Idle Blink/Feu_Idle Blinking_003.png" id="4_507x7"]
+[ext_resource type="Texture2D" uid="uid://q4w84t3ajyrx" path="res://assets/sprites/PNG Sequences/Dying/Feu_Dying_002.png" id="4_i0l13"]
+[ext_resource type="Texture2D" uid="uid://b7dfaep2q22n6" path="res://assets/sprites/PNG Sequences/Dying/Feu_Dying_003.png" id="5_lun8k"]
 [ext_resource type="Texture2D" uid="uid://b42wd30kr1p4v" path="res://assets/sprites/PNG Sequences/Idle Blink/Feu_Idle Blinking_004.png" id="5_xk4de"]
 [ext_resource type="Texture2D" uid="uid://v5mhg2d0lpos" path="res://assets/sprites/PNG Sequences/Idle Blink/Feu_Idle Blinking_005.png" id="6_2uv7e"]
+[ext_resource type="Texture2D" uid="uid://bbdod1jlehgvn" path="res://assets/sprites/PNG Sequences/Dying/Feu_Dying_004.png" id="6_wkn2l"]
 [ext_resource type="Texture2D" uid="uid://divaqktsgg54t" path="res://assets/sprites/PNG Sequences/Idle Blink/Feu_Idle Blinking_006.png" id="7_18orc"]
+[ext_resource type="Texture2D" uid="uid://def6cu7s2yklg" path="res://assets/sprites/PNG Sequences/Dying/Feu_Dying_005.png" id="7_j7vpr"]
 [ext_resource type="Texture2D" uid="uid://dqobw3mksfqa2" path="res://assets/sprites/PNG Sequences/Idle Blink/Feu_Idle Blinking_007.png" id="8_5b3x2"]
+[ext_resource type="Texture2D" uid="uid://b0ncnwmgcisrx" path="res://assets/sprites/PNG Sequences/Dying/Feu_Dying_006.png" id="8_rludr"]
+[ext_resource type="Texture2D" uid="uid://d2hqen44qtqcv" path="res://assets/sprites/PNG Sequences/Dying/Feu_Dying_007.png" id="9_biou0"]
 [ext_resource type="Texture2D" uid="uid://incdb6td3qbu" path="res://assets/sprites/PNG Sequences/Idle Blink/Feu_Idle Blinking_008.png" id="9_mr45j"]
+[ext_resource type="Texture2D" uid="uid://kwgo2br0laa6" path="res://assets/sprites/PNG Sequences/Dying/Feu_Dying_008.png" id="10_p7b52"]
 [ext_resource type="Texture2D" uid="uid://djo6jxo2p3la6" path="res://assets/sprites/PNG Sequences/Idle Blink/Feu_Idle Blinking_009.png" id="10_uhk7j"]
+[ext_resource type="Texture2D" uid="uid://d2icy45hdg8fk" path="res://assets/sprites/PNG Sequences/Dying/Feu_Dying_009.png" id="11_f8aq7"]
+[ext_resource type="Texture2D" uid="uid://c3qcfme71urib" path="res://assets/sprites/PNG Sequences/Dying/Feu_Dying_010.png" id="12_dvmtg"]
+[ext_resource type="Texture2D" uid="uid://cb8vwm3mmd3om" path="res://assets/sprites/PNG Sequences/Dying/Feu_Dying_011.png" id="13_l6srp"]
+[ext_resource type="Texture2D" uid="uid://tyg2qmuawqip" path="res://assets/sprites/PNG Sequences/Dying/Feu_Dying_012.png" id="14_0ctdb"]
+[ext_resource type="Texture2D" uid="uid://ltn7y6v17bg1" path="res://assets/sprites/PNG Sequences/Dying/Feu_Dying_013.png" id="15_4xjbl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6yugu"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_c3pdi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_efcp8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_i0l13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lun8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wkn2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_j7vpr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rludr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_biou0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_p7b52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_f8aq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_dvmtg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_l6srp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_0ctdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4xjbl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4xjbl")
+}],
+"loop": true,
+"name": &"death",
+"speed": 12.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_uno50")
@@ -69,7 +133,7 @@ scale = Vector2(0.09312699, 0.095559455)
 sprite_frames = SubResource("SpriteFrames_6yugu")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.77784103
+frame_progress = 0.47657466
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=720533519]
 position = Vector2(-5, -12)

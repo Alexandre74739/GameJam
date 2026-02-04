@@ -72,6 +72,6 @@ func die_pnj():
 	# Animation de mort et suppression
 	if _animated_sprite.sprite_frames.has_animation("death"):
 		_animated_sprite.play("death")
-		await get_tree().create_timer(0.5).timeout
+		await get_tree().create_timer(1).timeout
 	
 	queue_free()
