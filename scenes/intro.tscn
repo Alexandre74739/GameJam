@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b12xlubjyw83k" path="res://assets/sprites/world_tileset.png" id="1_yjqpq"]
 [ext_resource type="PackedScene" uid="uid://j54lupoylhq8" path="res://scenes/player.tscn" id="2_4bx60"]
+[ext_resource type="PackedScene" path="res://scenes/pnj.tscn" id="3_4bx60"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yjqpq"]
 texture = ExtResource("1_yjqpq")
@@ -258,13 +259,23 @@ layer_1/name = "back ground"
 
 [node name="Player2" parent="scène intro" unique_id=1712431102 instance=ExtResource("2_4bx60")]
 position = Vector2(1681, -35)
+script = null
 
 [node name="AnimatedSprite2D" parent="scène intro/Player2" index="0" unique_id=1293317599]
+position = Vector2(0, 0)
 animation = &"walk"
+frame = 0
+frame_progress = 0.0
+
+[node name="CollisionShape2D" parent="scène intro/Player2" index="1" unique_id=750427530]
+position = Vector2(-1, 14)
+
+[node name="Camera2D" type="Camera2D" parent="scène intro/Player2" unique_id=1732048913]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="scène intro" unique_id=1860501464]
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_i2l1n")
+autoplay = &"arrivee_perso"
 
 [node name="ColorRect" type="ColorRect" parent="scène intro" unique_id=599243889]
 offset_left = 2261.0
@@ -284,4 +295,13 @@ theme_override_font_sizes/font_size = 5
 text = "blablabalblabalblabalblabalbl"
 autowrap_mode = 2
 
+[node name="PNJ" parent="scène intro" unique_id=1810933666 instance=ExtResource("3_4bx60")]
+position = Vector2(3026, -25)
+scale = Vector2(-1, 1)
+script = null
+
+[node name="AnimatedSprite2D" parent="scène intro/PNJ" index="0" unique_id=1184989489]
+frame_progress = 0.0
+
 [editable path="scène intro/Player2"]
+[editable path="scène intro/PNJ"]
