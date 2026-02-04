@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://cif3f68kg616m"]
+
+[ext_resource type="Texture2D" uid="uid://dmr1qumucebeu" path="res://assets/background_/monde-froid.png" id="1_bb3ko"]
+
+[sub_resource type="Gradient" id="Gradient_hdx5m"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 0.56078434)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_0pjoj"]
+gradient = SubResource("Gradient_hdx5m")
+
+[node name="PageCrédits" type="Node2D" unique_id=1128068352]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=124538892]
+offset_right = 1156.0
+offset_bottom = 645.0
+
+[node name="MondeFroid" type="Sprite2D" parent="." unique_id=633486156]
+self_modulate = Color(1, 1, 1, 0.48235294)
+position = Vector2(577.35956, 323.5)
+scale = Vector2(1.1040161, 1.1044521)
+texture = ExtResource("1_bb3ko")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1927607029]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 400.0
+offset_top = 77.0
+offset_right = 764.0
+offset_bottom = 579.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = SubResource("GradientTexture1D_0pjoj")
+
+[node name="Label" type="Label" parent="TextureRect2" unique_id=7993598]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -250.0
+offset_right = 180.0
+offset_bottom = 249.0
+grow_horizontal = 2
+grow_vertical = 2
