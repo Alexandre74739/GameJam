@@ -189,7 +189,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_yjqpq"]
 resource_name = "arrivee_perso"
-length = 10.0
+length = 39.8
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -221,10 +221,10 @@ tracks/2/path = NodePath("scène intro/ColorRect/Label:text")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(6.3, 7.5075684),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(6.3, 7.5075684, 8.273272),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": ["blablabalblabalblabalblabalbl", "2 eme phrase"]
+"values": ["blablabalblabalblabalblabalbl", "2 eme phrase", "3 eme phrase "]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -267,20 +267,21 @@ root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_i2l1n")
 
 [node name="ColorRect" type="ColorRect" parent="scène intro" unique_id=599243889]
-offset_left = 2276.0
-offset_top = -76.0
-offset_right = 2407.0
-offset_bottom = -55.0
+offset_left = 2261.0
+offset_top = -74.0
+offset_right = 2383.0
+offset_bottom = -54.0
 
 [node name="Label" type="Label" parent="scène intro/ColorRect" unique_id=844773226]
 layout_mode = 0
 offset_left = 1.0
-offset_top = 6.0
-offset_right = 130.0
+offset_top = 2.0
+offset_right = 121.0
 offset_bottom = 21.0
 tooltip_text = "Ça a l'air magique...\")."
 theme_override_colors/font_color = Color(0.19524238, 0.36777174, 0.54644144, 1)
 theme_override_font_sizes/font_size = 5
 text = "blablabalblabalblabalblabalbl"
+autowrap_mode = 2
 
 [editable path="scène intro/Player2"]
