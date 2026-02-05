@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdl6enllthe70"
-path="res://.godot/imported/Fond-page-crédits.png-6a3ed9475835a3c8137a2d537a2b6a4d.ctex"
+uid="uid://udqh1hc0vqh0"
+path="res://.godot/imported/school.png-ca8b30336e0eff7060e5789cc45e82bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Fond-page-crédits.png"
-dest_files=["res://.godot/imported/Fond-page-crédits.png-6a3ed9475835a3c8137a2d537a2b6a4d.ctex"]
+source_file="res://assets/sprites/school.png"
+dest_files=["res://.godot/imported/school.png-ca8b30336e0eff7060e5789cc45e82bb.ctex"]
 
 [params]
 
