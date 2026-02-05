@@ -26,7 +26,7 @@ extends Node2D
 # === RÉFÉRENCES ===
 @onready var player = get_tree().get_first_node_in_group("Player")
 @onready var water_rect = $WaterRect
-@onready var story_label = $UI/StoryLabel
+@onready var story_label = $UI/MarginContainer/StoryLabel
 
 # === VARIABLES ===
 var is_water_rising = false
