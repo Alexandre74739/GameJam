@@ -295,6 +295,18 @@ tracks/12/keys = {
 "update": 0,
 "values": [Color(0, 0, 0, 1)]
 }
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("scène intro/Player2/Camera2D:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(65, -5)]
+}
 
 [sub_resource type="Animation" id="Animation_yjqpq"]
 resource_name = "arrivee_perso"
@@ -321,7 +333,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 6, 28.066668, 32),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(1757, -35), Vector2(2266, -35), Vector2(2266, -35), Vector2(1752, -35)]
+"values": [Vector2(1757, 0), Vector2(2266, 0), Vector2(2266, 0), Vector2(1752, 0)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -354,10 +366,10 @@ tracks/4/path = NodePath("scène intro/PNJ:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(10.009007, 12.966666),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 10.009007, 12.966666),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(2966, -25), Vector2(2406, -25)]
+"values": [Vector2(2966, 14), Vector2(2966, 14), Vector2(2406, 14)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -414,7 +426,7 @@ tracks/9/path = NodePath("scène intro/rideau_fin:modulate")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(29.633333, 32.566666),
+"times": PackedFloat32Array(26.9, 32.566666),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -426,10 +438,10 @@ tracks/10/path = NodePath("scène intro/CanvasLayer/BandeHaut:position")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(0, 1.975915),
+"times": PackedFloat32Array(0, 2.0274606),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1790, -178), Vector2(1790, -124)]
+"values": [Vector2(1790, -178), Vector2(1790, -176)]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
@@ -438,10 +450,10 @@ tracks/11/path = NodePath("scène intro/CanvasLayer/BandeBas:position")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
-"times": PackedFloat32Array(0, 2.0102787),
+"times": PackedFloat32Array(0, 2.0274606),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1792, 132), Vector2(1784, 23)]
+"values": [Vector2(1792, 132), Vector2(1786, 87)]
 }
 tracks/12/type = "value"
 tracks/12/imported = false
@@ -450,10 +462,22 @@ tracks/12/path = NodePath("scène intro/rideau_ouverture:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
-"times": PackedFloat32Array(0.23333333, 7.0666666),
+"times": PackedFloat32Array(0.23333333, 8.866667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("scène intro/Player2/Camera2D:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 29.921532, 32.18651),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(295, -5), Vector2(65, -5), Vector2(339, -5)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_i2l1n"]
@@ -467,7 +491,7 @@ _data = {
 [node name="scène intro" type="Node" parent="." unique_id=1901177568]
 
 [node name="TileMap" type="TileMap" parent="scène intro" unique_id=1675437530]
-position = Vector2(1783, -20)
+position = Vector2(1781, 18)
 tile_set = SubResource("TileSet_4bx60")
 format = 2
 layer_0/tile_data = PackedInt32Array(0, 131072, 0, 65536, 131072, 1, 1, 196608, 0, 65537, 196608, 1, 2, 131072, 0, 65538, 131072, 1, 3, 0, 0, 65539, 196608, 1, 4, 131072, 0, 65540, 131072, 1, 5, 196608, 0, 65541, 196608, 1, 6, 131072, 0, 65542, 131072, 1, 7, 196608, 0, 65543, 196608, 1, 8, 131072, 0, 65544, 131072, 1, 9, 0, 0, 65545, 0, 0, 10, 0, 0, 65546, 0, 0, 11, 0, 0, 65547, 0, 0, 12, 0, 0, 65548, 0, 0, 13, 196608, 0, 65549, 0, 0, 14, 131072, 0, 65550, 131072, 1, 15, 196608, 0, 65551, 196608, 1, 16, 131072, 0, 65552, 131072, 1, 17, 196608, 0, 65553, 196608, 1, 18, 131072, 0, 65554, 131072, 1, 19, 196608, 0, 65555, 196608, 1, 20, 131072, 0, 65556, 131072, 1, 21, 196608, 0, 65557, 196608, 1, 22, 131072, 0, 65558, 131072, 1, 23, 196608, 0, 65559, 196608, 1, 24, 131072, 0, 65560, 131072, 1, 25, 196608, 0, 65561, 196608, 1, 26, 131072, 0, 65562, 131072, 1, 27, 196608, 0, 65563, 196608, 1, 28, 65536, 0, 65564, 131072, 1, 29, 65536, 0, 65565, 65536, 0, 30, 65536, 0, 65566, 65536, 0, 31, 65536, 0, 65567, 65536, 0, 32, 131072, 0, 65568, 131072, 1, 33, 196608, 0, 65569, 196608, 1, 34, 131072, 0, 65570, 131072, 1, 35, 196608, 0, 65571, 196608, 1, 36, 131072, 0, 65572, 131072, 1, 37, 196608, 0, 65573, 196608, 1, 38, 0, 0, 65574, 131072, 1, 39, 196608, 0, 65575, 196608, 1, 40, 131072, 0, 65576, 131072, 1, 41, 196608, 0, 65577, 196608, 1, 42, 65536, 0, 65578, 131072, 1, 43, 65536, 0, 65579, 196608, 1, 44, 65536, 0, 65580, 131072, 1, 45, 65536, 0, 65581, 196608, 1, 46, 65536, 0, 65582, 131072, 1, 47, 196608, 0, 65583, 196608, 1, 48, 131072, 0, 65584, 131072, 1, 49, 196608, 0, 65585, 196608, 1, 50, 131072, 0, 65586, 131072, 1, 51, 196608, 0, 65587, 196608, 1, 52, 131072, 0, 65588, 131072, 1, 53, 0, 1, 65589, 196608, 1, 54, 0, 1, 65590, 131072, 1, 55, 0, 1, 65591, 196608, 1, 56, 0, 1, 65592, 131072, 1, 57, 0, 1, 65593, 196608, 1, 58, 0, 1, 65594, 0, 1, 59, 196608, 0, 65595, 196608, 1, 60, 131072, 0, 65596, 131072, 1, 61, 196608, 0, 65597, 196608, 1, 62, 0, 0, 65598, 131072, 1, 63, 196608, 0, 65599, 196608, 1, 64, 0, 0, 65600, 131072, 1, 65, 196608, 0, 65601, 196608, 1, 66, 131072, 0, 65602, 131072, 1, 67, 196608, 0, 65603, 196608, 1, 68, 131072, 0, 65604, 131072, 1, 69, 196608, 0, 65605, 196608, 1, 70, 0, 0, 65606, 131072, 1, 71, 196608, 0, 65607, 196608, 1, 131072, 262144, 10, 262144, 262144, 10, 131073, 262144, 9, 196609, 262144, 10, 131074, 262144, 10, 262146, 262144, 10, 131075, 262144, 10, 196611, 262144, 10, 131076, 262144, 10, 262148, 262144, 10, 131077, 262144, 10, 196613, 262144, 10, 131078, 262144, 10, 262150, 262144, 9, 131079, 262144, 10, 196615, 262144, 10, 131080, 262144, 10, 262152, 262144, 9, 131081, 262144, 10, 196617, 262144, 10, 131082, 262144, 10, 262154, 262144, 9, 131083, 262144, 10, 196619, 262144, 10, 131084, 262144, 10, 262156, 262144, 9, 131085, 262144, 10, 196621, 262144, 10, 131086, 262144, 10, 262158, 262144, 10, 131087, 262144, 10, 196623, 262144, 10, 131088, 262144, 10, 262160, 262144, 9, 131089, 262144, 10, 196625, 262144, 10, 131090, 262144, 10, 262162, 262144, 9, 131091, 262144, 10, 196627, 262144, 10, 131092, 262144, 9, 262164, 262144, 9, 131093, 262144, 9, 196629, 262144, 9, 131094, 262144, 9, 262166, 262144, 9, 131095, 262144, 9, 196631, 262144, 9, 131096, 262144, 9, 262168, 262144, 9, 131097, 262144, 9, 196633, 262144, 10, 131098, 262144, 9, 262170, 262144, 9, 131099, 262144, 9, 196635, 262144, 9, 131100, 262144, 9, 262172, 262144, 9, 131101, 262144, 9, 196637, 262144, 9, 131102, 262144, 9, 262174, 262144, 9, 131103, 262144, 9, 196639, 262144, 9, 131104, 262144, 9, 262176, 262144, 9, 131105, 262144, 9, 196641, 262144, 9, 131106, 262144, 9, 262178, 262144, 9, 131107, 262144, 9, 196643, 262144, 9, 131108, 262144, 9, 262180, 262144, 9, 131109, 262144, 9, 196645, 262144, 9, 131110, 262144, 9, 262182, 262144, 9, 131111, 262144, 9, 196647, 262144, 9, 131112, 262144, 9, 262184, 262144, 9, 131113, 262144, 9, 196649, 262144, 9, 131114, 262144, 9, 262186, 262144, 9, 131115, 262144, 9, 196651, 262144, 10, 131116, 262144, 9, 262188, 262144, 9, 131117, 262144, 9, 196653, 262144, 10, 131118, 262144, 9, 262190, 262144, 9, 131119, 262144, 9, 196655, 262144, 10, 131120, 262144, 9, 262192, 262144, 9, 131121, 262144, 9, 196657, 262144, 10, 131122, 262144, 9, 262194, 262144, 9, 131123, 262144, 9, 196659, 262144, 10, 131124, 262144, 9, 262196, 262144, 9, 131125, 262144, 9, 196661, 262144, 10, 131126, 262144, 9, 262198, 262144, 9, 131127, 262144, 9, 196663, 262144, 10, 131128, 262144, 9, 262200, 262144, 9, 131129, 262144, 9, 196665, 262144, 10, 131130, 262144, 9, 262202, 262144, 9, 131131, 262144, 9, 196667, 262144, 10, 131132, 262144, 9, 262204, 262144, 9, 131133, 262144, 9, 196669, 262144, 10, 131134, 262144, 9, 262206, 262144, 9, 131135, 262144, 9, 196671, 262144, 10, 131136, 262144, 9, 262208, 262144, 9, 131137, 262144, 9, 196673, 262144, 10, 131138, 262144, 9, 262210, 262144, 9, 131139, 262144, 9, 196675, 262144, 10, 131140, 262144, 9, 262212, 262144, 9, 131141, 262144, 9, 196677, 262144, 10, 131142, 262144, 9, 262214, 262144, 9, 131143, 262144, 9, 196679, 262144, 10, 196610, 262144, 10, 196612, 262144, 10, 196614, 262144, 10, 196616, 262144, 10, 196618, 262144, 10, 196620, 262144, 10, 196622, 262144, 10, 196624, 262144, 10, 262161, 262144, 9, 262163, 262144, 9, 262165, 262144, 9, 262167, 262144, 9, 196626, 262144, 10, 196608, 262144, 10, 262145, 262144, 10, 262147, 262144, 10, 262149, 262144, 9, 262151, 262144, 9, 262153, 262144, 9, 262155, 262144, 9, 262157, 262144, 10, 262159, 262144, 10, 196628, 262144, 9, 196630, 262144, 9, 196632, 262144, 9, 262171, 262144, 9, 196636, 262144, 9, 196634, 262144, 9, 262169, 262144, 9, 196638, 262144, 9, 196640, 262144, 9, 262175, 262144, 9, 262173, 262144, 9, 196642, 262144, 9, 262177, 262144, 9, 196644, 262144, 9, 262179, 262144, 9, 196678, 262144, 10, 196676, 262144, 10, 196674, 262144, 10, 196672, 262144, 10, 196670, 262144, 10, 196668, 262144, 10, 196666, 262144, 10, 196664, 262144, 10, 196662, 262144, 10, 196660, 262144, 10, 262185, 262144, 9, 262183, 262144, 9, 262181, 262144, 9, 262213, 262144, 9, 262211, 262144, 9, 262209, 262144, 9, 262207, 262144, 9, 262205, 262144, 9, 262203, 262144, 9, 262201, 262144, 9, 262199, 262144, 9, 262197, 262144, 9, 262195, 262144, 9, 262193, 262144, 9, 262191, 262144, 9, 262189, 262144, 9, 262187, 262144, 9, 196648, 262144, 9, 196646, 262144, 9, 196654, 262144, 10, 196652, 262144, 10, 196650, 262144, 10, 196656, 262144, 10, 196658, 262144, 10, 262215, 262144, 9, -262138, 131072, 5, -196602, 131072, 6, -65530, 131072, 8, -262137, 196608, 5, -196601, 196608, 6, -131065, 196608, 7, -65529, 196608, 8, -262110, 131072, 5, -196574, 131072, 6, -65502, 131072, 8, -262109, 196608, 5, -196573, 196608, 6, -131037, 196608, 7, -65501, 196608, 8, -65521, 393216, 5, -65483, 393216, 5, -65469, 393216, 5, -65488, 262144, 8, -65495, 458752, 5, -65516, 458752, 5, -65535, 458752, 5, -65506, 524288, 6, -65524, 262144, 8, -65465, 262144, 8)
@@ -488,22 +512,16 @@ flip_h = true
 position = Vector2(-1, 14)
 
 [node name="Camera2D" type="Camera2D" parent="scène intro/Player2" unique_id=1732048913]
-position = Vector2(28.903076, 22)
+position = Vector2(65, -5)
 zoom = Vector2(3.2, 3.2)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="scène intro" unique_id=1860501464]
-root_node = NodePath("../..")
-libraries/ = SubResource("AnimationLibrary_i2l1n")
-autoplay = &"arrivee_perso"
-
 [node name="ColorRect" type="ColorRect" parent="scène intro" unique_id=599243889]
-offset_left = 2261.0
-offset_top = -74.0
-offset_right = 2383.0
-offset_bottom = -54.0
+offset_left = 2273.0
+offset_top = -31.0
+offset_right = 2395.0
+offset_bottom = -11.0
 
 [node name="Label" type="Label" parent="scène intro/ColorRect" unique_id=844773226]
-texture_filter = 2
 layout_mode = 0
 offset_left = 1.0
 offset_top = 2.0
@@ -515,37 +533,43 @@ theme_override_font_sizes/font_size = 5
 text = "blablabalblabalblabalblabalbl"
 autowrap_mode = 2
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="scène intro" unique_id=1860501464]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_i2l1n")
+autoplay = &"arrivee_perso"
+
 [node name="PNJ" parent="scène intro" unique_id=1810933666 instance=ExtResource("3_4bx60")]
 position = Vector2(2966, -25)
 scale = Vector2(-1, 1)
 script = null
 
 [node name="AnimatedSprite2D" parent="scène intro/PNJ" index="0" unique_id=1184989489]
-frame_progress = 0.43585727
+frame_progress = 0.07495012
 
 [node name="BulePNJ" type="ColorRect" parent="scène intro" unique_id=1103775826]
 visible = false
 offset_left = 2401.0
-offset_top = -73.0
-offset_right = 2498.0
-offset_bottom = -55.0
+offset_top = -40.0
+offset_right = 2505.0
+offset_bottom = -18.0
 
 [node name="Label" type="Label" parent="scène intro/BulePNJ" unique_id=695637613]
 layout_mode = 0
 offset_left = 2.0
-offset_right = 95.0
-offset_bottom = 19.0
+offset_top = 1.0
+offset_right = 100.0
+offset_bottom = 17.0
 theme_override_colors/font_color = Color(0.19607843, 0.36862746, 0.54509807, 1)
-theme_override_font_sizes/font_size = 5
+theme_override_font_sizes/font_size = 6
 text = "c donc toi le dernier survivant ?"
 autowrap_mode = 2
 
 [node name="rideau_fin" type="ColorRect" parent="scène intro" unique_id=1333438884]
 modulate = Color(1, 1, 1, 0)
-offset_left = 1723.0
-offset_top = -94.0
+offset_left = 1702.0
+offset_top = -172.0
 offset_right = 2999.0
-offset_bottom = 93.0
+offset_bottom = 165.0
 color = Color(0, 0, 0, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="scène intro" unique_id=547630847]
@@ -556,22 +580,22 @@ follow_viewport_enabled = true
 offset_left = 1790.0
 offset_top = -178.0
 offset_right = 2937.0237
-offset_bottom = -144.0
+offset_bottom = -99.0
 color = Color(0, 0, 0, 1)
 
 [node name="BandeBas" type="ColorRect" parent="scène intro/CanvasLayer" unique_id=1438789217]
 offset_left = 1792.0
 offset_top = 132.0
-offset_right = 2950.02
-offset_bottom = 170.0
+offset_right = 2950.0317
+offset_bottom = 207.0001
 color = Color(0, 0, 0, 1)
 
 [node name="rideau_ouverture" type="ColorRect" parent="scène intro" unique_id=13346939]
 modulate = Color(0, 0, 0, 1)
-offset_left = 1783.0
-offset_top = -135.0
-offset_right = 2951.0
-offset_bottom = 142.0
+offset_left = 1544.0
+offset_top = -180.0
+offset_right = 2991.0
+offset_bottom = 193.0
 color = Color(0, 0, 0, 1)
 
 [editable path="scène intro/Player2"]
