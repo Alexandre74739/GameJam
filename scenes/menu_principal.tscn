@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://kwbug6725jb2"]
 
 [ext_resource type="Script" uid="uid://b32ifa8bwrlwi" path="res://scripts/menu_principal.gd" id="1_i85hu"]
-[ext_resource type="Texture2D" uid="uid://udp7joflhurf" path="res://assets/background_/background-menu.png" id="2_iep14"]
+[ext_resource type="Texture2D" uid="uid://caw240gjggddp" path="res://assets/sprites/Fond-Menu.png" id="2_486ty"]
 [ext_resource type="FontFile" uid="uid://c1ixcj2u8i5wu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_486ty"]
+[ext_resource type="Texture2D" uid="uid://3sit1b7syuvv" path="res://assets/sprites/logo-X-TRM.png" id="4_w5ui5"]
 
 [sub_resource type="Theme" id="Theme_w5ui5"]
 
@@ -29,16 +30,10 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Title" type="Label" parent="." unique_id=598309336]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-
-[node name="BackgroundMenu" type="Sprite2D" parent="." unique_id=1649622033]
-self_modulate = Color(1, 1, 1, 0.49803922)
-position = Vector2(571, 324.25)
-scale = Vector2(1.0052083, 1.1822344)
-texture = ExtResource("2_iep14")
+[node name="FondMenu" type="Sprite2D" parent="." unique_id=1965879686]
+position = Vector2(576, 323.00003)
+scale = Vector2(1.9391894, 1.7500002)
+texture = ExtResource("2_486ty")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1950997575]
 layout_mode = 1
@@ -48,9 +43,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -191.0
-offset_top = -134.0
+offset_top = -93.0
 offset_right = 179.0
-offset_bottom = 192.0
+offset_bottom = 233.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 32
@@ -95,6 +90,10 @@ layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 text = "Retour"
+
+[node name="LogoXTrm" type="Sprite2D" parent="." unique_id=48166145]
+position = Vector2(580, 175)
+texture = ExtResource("4_w5ui5")
 
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/CréditsButton" to="." method="_on_rules_button_pressed"]
