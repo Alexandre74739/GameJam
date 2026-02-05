@@ -8,11 +8,13 @@ func _ready():
 	add_child(intro_timer)
 	intro_timer.one_shot = true
 	intro_timer.timeout.connect(_on_intro_finished)
+	$"scène intro/AnimationPlayer".play("arrivee_perso")
 	
 	# Durée de l'intro en secondes (ajustez selon votre besoin)
 	intro_timer.start(34.4)
 
 func _on_intro_finished():
+	$"scène intro/MusiqueIntro".stop()
 	# Passer au menu principal
 	get_tree().change_scene_to_file("res://scenes/menu_principal.tscn")
 

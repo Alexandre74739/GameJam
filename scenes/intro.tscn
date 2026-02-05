@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ht7gg0vlsdnn"]
 
-[ext_resource type="Script" path="res://scripts/intro.gd" id="1_es01l"]
+[ext_resource type="Script" uid="uid://duijsldfkjswe" path="res://scripts/intro.gd" id="1_es01l"]
 [ext_resource type="Texture2D" uid="uid://cu2a03j3q468p" path="res://assets/sprites/Assets-nouveaux 3.png" id="1_wfs7u"]
 [ext_resource type="PackedScene" uid="uid://j54lupoylhq8" path="res://scenes/player.tscn" id="2_4bx60"]
 [ext_resource type="PackedScene" uid="uid://6pf6bokdsrhr" path="res://scenes/pnj.tscn" id="3_4bx60"]
@@ -603,7 +603,6 @@ autowrap_mode = 2
 [node name="AnimationPlayer" type="AnimationPlayer" parent="scène intro" unique_id=1860501464]
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_i2l1n")
-autoplay = &"arrivee_perso"
 
 [node name="PNJ" parent="scène intro" unique_id=1810933666 instance=ExtResource("3_4bx60")]
 position = Vector2(2966, -25)
@@ -653,8 +652,8 @@ color = Color(0, 0, 0, 1)
 [node name="BandeBas" type="ColorRect" parent="scène intro/CanvasLayer" unique_id=1438789217]
 offset_left = 1792.0
 offset_top = 132.0
-offset_right = 2974.3318
-offset_bottom = 214.42532
+offset_right = 2974.3315
+offset_bottom = 214.42531
 color = Color(0, 0, 0, 1)
 
 [node name="rideau_ouverture" type="ColorRect" parent="scène intro" unique_id=13346939]
