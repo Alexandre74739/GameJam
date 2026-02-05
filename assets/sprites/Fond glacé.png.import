@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdl6enllthe70"
-path="res://.godot/imported/Fond-page-crédits.png-6a3ed9475835a3c8137a2d537a2b6a4d.ctex"
+uid="uid://l71gwqjbn65l"
+path="res://.godot/imported/Fond glacé.png-350447bc7299f9759a3ef0d465218e24.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Fond-page-crédits.png"
-dest_files=["res://.godot/imported/Fond-page-crédits.png-6a3ed9475835a3c8137a2d537a2b6a4d.ctex"]
+source_file="res://assets/sprites/Fond glacé.png"
+dest_files=["res://.godot/imported/Fond glacé.png-350447bc7299f9759a3ef0d465218e24.ctex"]
 
 [params]
 

@@ -19,8 +19,8 @@ script = ExtResource("1_0pjoj")
 
 [node name="FondPageCrédits" type="Sprite2D" parent="." unique_id=1148326855]
 self_modulate = Color(1, 1, 1, 0.34901962)
-position = Vector2(581.12823, 327.71875)
-scale = Vector2(2.219582, 2.2149913)
+position = Vector2(968.20374, 544.71875)
+scale = Vector2(3.714082, 3.7064002)
 texture = SubResource("CompressedTexture2D_hdx5m")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=124538892]
@@ -33,10 +33,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 402.0
-offset_top = 98.0
-offset_right = 766.0
-offset_bottom = 600.0
+offset_left = 784.0
+offset_top = 303.0
+offset_right = 1148.0
+offset_bottom = 805.0
 grow_horizontal = 0
 grow_vertical = 0
 texture = SubResource("GradientTexture1D_0pjoj")
@@ -69,9 +69,6 @@ Juliette
 Emrick
 Vipushan
 
-Graphismes additionnels
-Ressources libres de droits 
-(itch.io / OpenGameArt)
 
 Musique
 Pixabay Music Library
