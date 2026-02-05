@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://kwbug6725jb2"]
 
 [ext_resource type="Script" uid="uid://b32ifa8bwrlwi" path="res://scripts/menu_principal.gd" id="1_i85hu"]
-[ext_resource type="Texture2D" uid="uid://rjftmhix08du" path="res://assets/sprites/Fond-menu.png" id="2_486ty"]
+[ext_resource type="Texture2D" uid="uid://rjftmhix08du" path="res://assets/sprites/Fond-Menu.png" id="2_486ty"]
 [ext_resource type="FontFile" uid="uid://c1ixcj2u8i5wu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_486ty"]
 [ext_resource type="Texture2D" uid="uid://3sit1b7syuvv" path="res://assets/sprites/logo-X-TRM.png" id="4_w5ui5"]
 

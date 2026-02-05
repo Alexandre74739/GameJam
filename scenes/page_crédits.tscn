@@ -13,14 +13,21 @@ colors = PackedColorArray(1, 1, 1, 0.73333335)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_0pjoj"]
 gradient = SubResource("Gradient_hdx5m")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jhcdh"]
+bg_color = Color(0.07058824, 0.07058824, 0.06666667, 0.78431374)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+
 [node name="PageCrédits" type="Node2D" unique_id=1128068352]
 position = Vector2(-4, -2)
 script = ExtResource("1_0pjoj")
 
 [node name="FondPageCrédit" type="Sprite2D" parent="." unique_id=404986907]
 modulate = Color(1, 1, 1, 0.4)
-position = Vector2(971.0715, 542.25)
-scale = Vector2(0.75195307, 0.5979352)
+position = Vector2(967.2858, 542.25)
+scale = Vector2(0.74899554, 0.5979352)
 texture = ExtResource("2_jhcdh")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=124538892]
@@ -50,27 +57,31 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 16.0
-offset_top = -98.0
-offset_right = 440.0
-offset_bottom = 120.0
+offset_left = -189.0
+offset_top = -143.0
+offset_right = 717.0
+offset_bottom = 270.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_hdx5m")
-theme_override_font_sizes/font_size = 14
-text = "Le but du jeu est d’éliminer le 
-plus d’ennemis possible afin
- d’obtenir le meilleur score.
-Cependant, à partir de 10
- ennemis vaincus, la difficulté
- augmente fortement et il devient
- très compliqué de tous les battre. 
-Le joueur doit alors trouver et 
-atteindre une porte présente sur
- le terrain pour s’échapper et terminer 
-la partie."
-horizontal_alignment = 1
+theme_override_font_sizes/font_size = 22
+text = "Dans un monde ravagé par un 
+dérèglement 
+climatique extrême, deux territoires 
+ s’opposent : l’Infernos 
+brûlant et la Cryosphère
+ glacée. Le joueur incarne un 
+survivant contraint de combattre 
+des ennemis toujours plus nombreux
+ pour accumuler un maximum de points. 
+Mais plus il en  élimine, plus
+ le danger augmente. Quand la situation 
+devient incontrôlable, une seule 
+solution : atteindre une porte apparue
+ sur le terrain pour s’échapper 
+avec son scoreavant qu’il ne soit trop tard.
+ "
 
 [node name="Label2" type="Label" parent="TextureRect2" unique_id=332663500]
 layout_mode = 0
@@ -118,9 +129,12 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Donner des coups"
 
 [node name="Button" type="Button" parent="." unique_id=2102026064]
-offset_right = 107.0
-offset_bottom = 53.0
+offset_left = 1795.0
+offset_top = 5.0
+offset_right = 1925.0
+offset_bottom = 58.0
 theme_override_fonts/font = ExtResource("2_hdx5m")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jhcdh")
 text = "Retour"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1134214120]
@@ -153,12 +167,13 @@ scale = Vector2(0.38476563, 0.38476563)
 texture = ExtResource("4_jhcdh")
 
 [node name="Label" type="Label" parent="." unique_id=1440288314]
-offset_left = 1133.0
-offset_top = 389.0
-offset_right = 1311.0
-offset_bottom = 423.0
+offset_left = 1049.0
+offset_top = 354.0
+offset_right = 1327.0
+offset_bottom = 388.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_hdx5m")
+theme_override_font_sizes/font_size = 25
 text = "Explications"
 
 [node name="School" type="Sprite2D" parent="." unique_id=755634635]
