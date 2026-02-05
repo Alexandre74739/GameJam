@@ -211,10 +211,34 @@ tracks/5/keys = {
 "update": 1,
 "values": [&"idle-cold"]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("scène intro/BulePNJ:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("scène intro/BulePNJ/Label:text")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["c donc toi le dernier survivant ?"]
+}
 
 [sub_resource type="Animation" id="Animation_yjqpq"]
 resource_name = "arrivee_perso"
-length = 16.133333
+length = 32.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -246,10 +270,10 @@ tracks/2/path = NodePath("scène intro/ColorRect/Label:text")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(6.3, 7.5075684, 9),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(6.3, 7.5075684, 9, 14.094609, 21.8, 24.47216, 27.135351),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": ["blablabalblabalblabalblabalbl", "2 eme phrase", "3 eme phrase "]
+"values": ["blablabalblabalblabalblabalbl", "2 eme phrase", "3 eme phrase ", "qui est tu ? ", "j'avais prevenu mon espece, sur cete utilisation, personne m'ecoutai", "je me batterai pour rester debout , tu peut ramenez qui tu veut", "peut m'importe et bon courage !"]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -258,10 +282,10 @@ tracks/3/path = NodePath("scène intro/ColorRect:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 6.3),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 6.3, 11.539694, 14.08, 15.033334, 21.8, 29.614954),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [false, true]
+"values": [false, true, false, true, false, true, false]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -270,7 +294,7 @@ tracks/4/path = NodePath("scène intro/PNJ:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(10.009007, 13),
+"times": PackedFloat32Array(10.009007, 12.966666),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(2966, -25), Vector2(2406, -25)]
@@ -282,10 +306,34 @@ tracks/5/path = NodePath("scène intro/PNJ/AnimatedSprite2D:animation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(10),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(10, 13),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [&"idle-cold"]
+"values": [&"idle-cold", &"idle-cold"]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("scène intro/BulePNJ:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 13.1619, 14.033334, 15.17913, 21.633333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("scène intro/BulePNJ/Label:text")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(13.157144, 15.209129, 17.666666, 19.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["c donc toi le dernier survivant ?", "Depuis des année nous vous prevenons sur l'usage des IA", "personne nous prenais au serieux . voici le fruit de vos actes", "et nous sommes venu tous vous tuez ! ahh !!"]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_i2l1n"]
@@ -349,7 +397,24 @@ scale = Vector2(-1, 1)
 script = null
 
 [node name="AnimatedSprite2D" parent="scène intro/PNJ" index="0" unique_id=1184989489]
-frame_progress = 0.014708864
+frame_progress = 0.3763563
+
+[node name="BulePNJ" type="ColorRect" parent="scène intro" unique_id=1103775826]
+visible = false
+offset_left = 2401.0
+offset_top = -73.0
+offset_right = 2498.0
+offset_bottom = -55.0
+
+[node name="Label" type="Label" parent="scène intro/BulePNJ" unique_id=695637613]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 95.0
+offset_bottom = 19.0
+theme_override_colors/font_color = Color(0.19607843, 0.36862746, 0.54509807, 1)
+theme_override_font_sizes/font_size = 5
+text = "c donc toi le dernier survivant ?"
+autowrap_mode = 2
 
 [editable path="scène intro/Player2"]
 [editable path="scène intro/PNJ"]
