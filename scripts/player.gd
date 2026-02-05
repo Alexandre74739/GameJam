@@ -82,6 +82,7 @@ func die():
 	call_deferred("reset_game")
 
 func reset_game():
+	$"/root/WaveManager".reset()
 	get_tree().reload_current_scene()
 
 # Assure-toi que ce signal est bien connecté dans l'éditeur

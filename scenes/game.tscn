@@ -550,7 +550,7 @@ vertical_alignment = 1
 script = ExtResource("12_dinhu")
 
 [node name="Portal" parent="." unique_id=1177514796 instance=ExtResource("13_kvuet")]
-position = Vector2(503, -143)
+position = Vector2(49, -146)
 
 [connection signal="body_entered" from="Levier" to="Player" method="_on_coin_body_entered"]
 [connection signal="body_entered" from="Levier" to="Levier" method="_on_body_entered"]
