@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rjftmhix08du"
-path="res://.godot/imported/Fond-Menu.png-90ad2df9caf7b75fa631c19b093164d4.ctex"
+uid="uid://csqulfpinqp7g"
+path="res://.godot/imported/Flèche.png-9024b15076fd0946178e0af32015ce19.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Fond-Menu.png"
-dest_files=["res://.godot/imported/Fond-Menu.png-90ad2df9caf7b75fa631c19b093164d4.ctex"]
+source_file="res://assets/sprites/Flèche.png"
+dest_files=["res://.godot/imported/Flèche.png-9024b15076fd0946178e0af32015ce19.ctex"]
 
 [params]
 

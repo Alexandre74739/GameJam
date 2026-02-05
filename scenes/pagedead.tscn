@@ -28,20 +28,6 @@ offset_right = 1614.7391
 offset_bottom = 921.0
 texture = SubResource("GradientTexture1D_hbcku")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1393202369]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 520.0
-offset_top = 291.0
-offset_right = 632.0
-offset_bottom = 357.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 32
-
 [node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=2041776334]
 anchors_preset = 8
 anchor_left = 0.5
@@ -49,9 +35,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 784.0
-offset_top = 428.0
+offset_top = 478.0
 offset_right = 1131.0
-offset_bottom = 688.0
+offset_bottom = 738.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 32
@@ -73,6 +59,15 @@ theme_override_fonts/font = ExtResource("1_xy22t")
 theme_override_font_sizes/font_size = 25
 theme_override_styles/hover = SubResource("StyleBoxFlat_7tep5")
 text = "Menu"
+
+[node name="Label" type="Label" parent="." unique_id=697534958]
+offset_left = 654.0
+offset_top = 296.0
+offset_right = 1241.0
+offset_bottom = 365.0
+theme_override_fonts/font = ExtResource("1_xy22t")
+theme_override_font_sizes/font_size = 68
+text = "GAME OVER"
 
 [connection signal="button_down" from="VBoxContainer2/Replaybtn" to="." method="_on_replaybtn_button_down"]
 [connection signal="button_down" from="VBoxContainer2/Menubtn" to="." method="_on_menubtn_button_down"]

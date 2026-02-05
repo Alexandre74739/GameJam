@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://cif3f68kg616m"]
 
 [ext_resource type="Script" uid="uid://whkkfwrjjqur" path="res://page_crédits.gd" id="1_0pjoj"]
+[ext_resource type="Texture2D" uid="uid://l71gwqjbn65l" path="res://assets/sprites/Fond glacé.png" id="2_0pjoj"]
 [ext_resource type="FontFile" uid="uid://c1ixcj2u8i5wu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_hdx5m"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hdx5m"]
-load_path = "res://.godot/imported/Fond-page-crédits.png-6a3ed9475835a3c8137a2d537a2b6a4d.ctex"
+[ext_resource type="Texture2D" uid="uid://csqulfpinqp7g" path="res://assets/sprites/Flèche.png" id="4_jhcdh"]
+[ext_resource type="Texture2D" uid="uid://udqh1hc0vqh0" path="res://assets/sprites/school.png" id="5_6r2qa"]
 
 [sub_resource type="Gradient" id="Gradient_hdx5m"]
 offsets = PackedFloat32Array(1)
-colors = PackedColorArray(1, 1, 1, 0.9647059)
+colors = PackedColorArray(1, 1, 1, 0.4117647)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_0pjoj"]
 gradient = SubResource("Gradient_hdx5m")
@@ -17,15 +17,17 @@ gradient = SubResource("Gradient_hdx5m")
 position = Vector2(-4, -2)
 script = ExtResource("1_0pjoj")
 
-[node name="FondPageCrédits" type="Sprite2D" parent="." unique_id=1148326855]
-self_modulate = Color(1, 1, 1, 0.34901962)
-position = Vector2(968.20374, 544.71875)
-scale = Vector2(3.714082, 3.7064002)
-texture = SubResource("CompressedTexture2D_hdx5m")
+[node name="FondGlacé" type="Sprite2D" parent="." unique_id=49335414]
+modulate = Color(1, 1, 1, 0.5372549)
+position = Vector2(964, 542)
+scale = Vector2(2.2758532, 2.2583892)
+texture = ExtResource("2_0pjoj")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=124538892]
-offset_right = 1156.0
-offset_bottom = 645.0
+offset_left = -55.0
+offset_top = -153.0
+offset_right = 946.0
+offset_bottom = 196.0
 
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=1927607029]
 anchors_preset = 3
@@ -33,10 +35,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 784.0
-offset_top = 303.0
-offset_right = 1148.0
-offset_bottom = 805.0
+offset_left = 365.0
+offset_top = 190.0
+offset_right = 1621.0
+offset_bottom = 934.0
 grow_horizontal = 0
 grow_vertical = 0
 texture = SubResource("GradientTexture1D_0pjoj")
@@ -48,44 +50,120 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -160.0
-offset_top = -213.0
-offset_right = 159.0
-offset_bottom = 217.0
+offset_left = 16.0
+offset_top = -98.0
+offset_right = 440.0
+offset_bottom = 120.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_hdx5m")
-theme_override_font_sizes/font_size = 12
-text = "CRÉDITS DU PROJET
+theme_override_font_sizes/font_size = 14
+text = "Le but du jeu est d’éliminer le 
+plus d’ennemis possible afin
+ d’obtenir le meilleur score.
+Cependant, à partir de 10
+ ennemis vaincus, la difficulté
+ augmente fortement et il devient
+ très compliqué de tous les battre. 
+Le joueur doit alors trouver et 
+atteindre une porte présente sur
+ le terrain pour s’échapper et terminer 
+la partie."
+horizontal_alignment = 1
 
-Développement du jeu
-Alexandre-Philippe
-David Robert
-Koffi Willy
+[node name="Label2" type="Label" parent="TextureRect2" unique_id=332663500]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 142.0
+offset_right = 264.0
+offset_bottom = 165.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Sauter"
 
-Design UI & Marketing
-Juliette
-Emrick
-Vipushan
+[node name="Label3" type="Label" parent="TextureRect2" unique_id=237400042]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 272.0
+offset_right = 124.0
+offset_bottom = 295.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = " gauche"
 
+[node name="Label4" type="Label" parent="TextureRect2" unique_id=350564064]
+layout_mode = 0
+offset_left = 359.0
+offset_top = 271.0
+offset_right = 410.0
+offset_bottom = 294.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Droite"
 
-Musique
-Pixabay Music Library
+[node name="Label5" type="Label" parent="TextureRect2" unique_id=1133960094]
+layout_mode = 0
+offset_left = 227.0
+offset_top = 412.0
+offset_right = 263.0
+offset_bottom = 435.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Bas"
 
-Effets sonores
-sons libres de droits
-
-Moteur
-Développé avec Godot Engine
-
-Version
-v3.0 – 2026"
+[node name="Label6" type="Label" parent="TextureRect2" unique_id=1185165187]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 563.0
+offset_right = 207.0
+offset_bottom = 586.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Donner des coups"
 
 [node name="Button" type="Button" parent="." unique_id=2102026064]
 offset_right = 107.0
 offset_bottom = 53.0
 theme_override_fonts/font = ExtResource("2_hdx5m")
 text = "Retour"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1134214120]
+offset_left = 550.0
+offset_top = 470.0
+offset_right = 590.0
+offset_bottom = 510.0
+
+[node name="Flèche" type="Sprite2D" parent="VBoxContainer" unique_id=1172830507]
+modulate = Color(1, 0.27999997, 0.27999997, 1)
+scale = Vector2(0.38476563, 0.38476563)
+texture = ExtResource("4_jhcdh")
+
+[node name="Flèche2" type="Sprite2D" parent="VBoxContainer" unique_id=842196266]
+position = Vector2(111, 0)
+rotation = -3.1381848
+scale = Vector2(0.38476563, 0.38476563)
+texture = ExtResource("4_jhcdh")
+
+[node name="Flèche3" type="Sprite2D" parent="VBoxContainer" unique_id=5719889]
+position = Vector2(55, -54)
+rotation = 1.5621123
+scale = Vector2(0.3847656, 0.3847656)
+texture = ExtResource("4_jhcdh")
+
+[node name="Flèche4" type="Sprite2D" parent="VBoxContainer" unique_id=1991500699]
+position = Vector2(56, 56)
+rotation = -1.5692146
+scale = Vector2(0.38476563, 0.38476563)
+texture = ExtResource("4_jhcdh")
+
+[node name="Label" type="Label" parent="." unique_id=1440288314]
+offset_left = 1133.0
+offset_top = 389.0
+offset_right = 1311.0
+offset_bottom = 423.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_hdx5m")
+text = "Explications"
+
+[node name="School" type="Sprite2D" parent="." unique_id=755634635]
+position = Vector2(623, 763.00006)
+scale = Vector2(0.41015625, 0.41015625)
+texture = ExtResource("5_6r2qa")
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
