@@ -1,44 +1,38 @@
 [gd_scene format=3 uid="uid://cb4123qnn5mtc"]
 
+[ext_resource type="Script" uid="uid://d1iy7ycbv0acb" path="res://scenes/pagedead.gd" id="1_8ldfu"]
 [ext_resource type="FontFile" uid="uid://c1ixcj2u8i5wu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_xy22t"]
 
 [sub_resource type="Gradient" id="Gradient_8ldfu"]
 offsets = PackedFloat32Array(0)
-colors = PackedColorArray(0.72464263, 0.72464263, 0.72464246, 0.6313726)
+colors = PackedColorArray(0.72, 0.72, 0.72, 0.4509804)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_hbcku"]
 gradient = SubResource("Gradient_8ldfu")
 
 [sub_resource type="Theme" id="Theme_e1mqi"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ldfu"]
+bg_color = Color(0.07058824, 0.07058824, 0.06666667, 0.78431374)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_06qmi"]
 bg_color = Color(0.56078434, 0.5254902, 0.5137255, 0.69411767)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hbcku"]
+bg_color = Color(0.07058824, 0.07058824, 0.06666667, 0.78431374)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7tep5"]
 bg_color = Color(0.56078434, 0.5254902, 0.5137255, 0.69411767)
 
-[node name="Pagedead" type="Node2D" unique_id=1890967865]
+[node name="Pagerègles" type="Node2D" unique_id=1890967865]
+script = ExtResource("1_8ldfu")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=818659222]
-offset_left = -1.0
-offset_top = 2.0
-offset_right = 1147.0
-offset_bottom = 646.0
+offset_left = 317.0
+offset_top = 193.0
+offset_right = 1614.7391
+offset_bottom = 921.0
 texture = SubResource("GradientTexture1D_hbcku")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1393202369]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 520.0
-offset_top = 291.0
-offset_right = 632.0
-offset_bottom = 357.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 32
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=2041776334]
 anchors_preset = 8
@@ -46,10 +40,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 410.0
-offset_top = 188.0
-offset_right = 757.0
-offset_bottom = 448.0
+offset_left = 784.0
+offset_top = 478.0
+offset_right = 1131.0
+offset_bottom = 738.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 32
@@ -60,6 +54,7 @@ size_flags_vertical = 3
 theme = SubResource("Theme_e1mqi")
 theme_override_fonts/font = ExtResource("1_xy22t")
 theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_8ldfu")
 theme_override_styles/hover = SubResource("StyleBoxFlat_06qmi")
 text = "Rejouer
 "
@@ -69,5 +64,18 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("1_xy22t")
 theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_hbcku")
 theme_override_styles/hover = SubResource("StyleBoxFlat_7tep5")
 text = "Menu"
+
+[node name="Label" type="Label" parent="." unique_id=697534958]
+offset_left = 654.0
+offset_top = 296.0
+offset_right = 1241.0
+offset_bottom = 365.0
+theme_override_fonts/font = ExtResource("1_xy22t")
+theme_override_font_sizes/font_size = 68
+text = "GAME OVER"
+
+[connection signal="button_down" from="VBoxContainer2/Replaybtn" to="." method="_on_replaybtn_button_down"]
+[connection signal="button_down" from="VBoxContainer2/Menubtn" to="." method="_on_menubtn_button_down"]

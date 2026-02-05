@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dv4ri8llbjglh"
+path="res://.godot/imported/Isabellas Lullaby x Trisha’s Lullaby - Cello Version The Promised Neverland x FMAB.wav-58df925c3a732db8cb2b8e89013dc342.sample"
+
+[deps]
+
+source_file="res://assets/music/Isabellas Lullaby x Trisha’s Lullaby - Cello Version The Promised Neverland x FMAB.wav"
+dest_files=["res://.godot/imported/Isabellas Lullaby x Trisha’s Lullaby - Cello Version The Promised Neverland x FMAB.wav-58df925c3a732db8cb2b8e89013dc342.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
