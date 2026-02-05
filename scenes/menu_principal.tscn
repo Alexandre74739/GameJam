@@ -57,7 +57,8 @@ theme = SubResource("Theme_w5ui5")
 theme_override_fonts/font = ExtResource("3_486ty")
 theme_override_font_sizes/font_size = 25
 theme_override_styles/hover = SubResource("StyleBoxFlat_qcl6i")
-text = "Lancer la survie"
+text = "Jouer
+"
 
 [node name="CréditsButton" type="Button" parent="VBoxContainer" unique_id=1738199419]
 layout_mode = 2

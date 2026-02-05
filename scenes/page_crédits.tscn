@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cif3f68kg616m"]
 
-[ext_resource type="Script" uid="uid://whkkfwrjjqur" path="res://scenes/page_crédits.gd" id="1_0pjoj"]
+[ext_resource type="Script" uid="uid://whkkfwrjjqur" path="res://page_crédits.gd" id="1_0pjoj"]
 [ext_resource type="FontFile" uid="uid://c1ixcj2u8i5wu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_hdx5m"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hdx5m"]
