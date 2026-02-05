@@ -235,10 +235,34 @@ tracks/7/keys = {
 "update": 1,
 "values": ["c donc toi le dernier survivant ?"]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("scène intro/Player2/AnimatedSprite2D:flip_h")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("scène intro/rideau_fin:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_yjqpq"]
 resource_name = "arrivee_perso"
-length = 32.5
+length = 35.366665
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -246,10 +270,10 @@ tracks/0/path = NodePath("scène intro/Player2/AnimatedSprite2D:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 6),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 6, 29),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [&"walk", &"idle"]
+"values": [&"walk", &"idle", &"walk"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -258,10 +282,10 @@ tracks/1/path = NodePath("scène intro/Player2:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 6),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 6, 32),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(1757, -35), Vector2(2266, -35)]
+"values": [Vector2(1757, -35), Vector2(2266, -35), Vector2(1752, -35)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -270,7 +294,7 @@ tracks/2/path = NodePath("scène intro/ColorRect/Label:text")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(6.3, 7.5075684, 9, 14.094609, 21.8, 24.47216, 27.135351),
+"times": PackedFloat32Array(6.3, 7.5075684, 9, 14.094609, 21.8, 24.233334, 26.466667),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": ["blablabalblabalblabalblabalbl", "2 eme phrase", "3 eme phrase ", "qui est tu ? ", "j'avais prevenu mon espece, sur cete utilisation, personne m'ecoutai", "je me batterai pour rester debout , tu peut ramenez qui tu veut", "peut m'importe et bon courage !"]
@@ -282,7 +306,7 @@ tracks/3/path = NodePath("scène intro/ColorRect:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 6.3, 11.539694, 14.08, 15.033334, 21.8, 29.614954),
+"times": PackedFloat32Array(0, 6.3, 11.539694, 14.08, 15.033334, 21.8, 28.433332),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [false, true, false, true, false, true, false]
@@ -335,6 +359,30 @@ tracks/7/keys = {
 "update": 1,
 "values": ["c donc toi le dernier survivant ?", "Depuis des année nous vous prevenons sur l'usage des IA", "personne nous prenais au serieux . voici le fruit de vos actes", "et nous sommes venu tous vous tuez ! ahh !!"]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("scène intro/Player2/AnimatedSprite2D:flip_h")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(29),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("scène intro/rideau_fin:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(32, 35),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_i2l1n"]
 _data = {
@@ -362,6 +410,7 @@ position = Vector2(0, 0)
 animation = &"walk"
 frame = 0
 frame_progress = 0.0
+flip_h = true
 
 [node name="CollisionShape2D" parent="scène intro/Player2" index="1" unique_id=750427530]
 position = Vector2(-1, 14)
@@ -397,7 +446,7 @@ scale = Vector2(-1, 1)
 script = null
 
 [node name="AnimatedSprite2D" parent="scène intro/PNJ" index="0" unique_id=1184989489]
-frame_progress = 0.21751617
+frame_progress = 0.22527885
 
 [node name="BulePNJ" type="ColorRect" parent="scène intro" unique_id=1103775826]
 visible = false
@@ -415,6 +464,14 @@ theme_override_colors/font_color = Color(0.19607843, 0.36862746, 0.54509807, 1)
 theme_override_font_sizes/font_size = 5
 text = "c donc toi le dernier survivant ?"
 autowrap_mode = 2
+
+[node name="rideau_fin" type="ColorRect" parent="scène intro" unique_id=1333438884]
+modulate = Color(1, 1, 1, 0)
+offset_left = 1723.0
+offset_top = -94.0
+offset_right = 2999.0
+offset_bottom = 93.0
+color = Color(0, 0, 0, 1)
 
 [editable path="scène intro/Player2"]
 [editable path="scène intro/PNJ"]
