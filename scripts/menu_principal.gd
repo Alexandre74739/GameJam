@@ -8,10 +8,7 @@ func _on_play_button_pressed():
 	get_tree().change_scene_to_file("res://scenes/game.tscn")
 
 func _on_rules_button_pressed():
-	rules_panel.show() # Affiche le panneau quand on clique sur Règles
-	rules_panel.modulate.a = 0
-	var tween = create_tween()
-	tween.tween_property(rules_panel, "modulate:a", 1.0, 0.3)
+	
 	get_tree().change_scene_to_file("res://scenes/page_crédits.tscn")
 
 func _on_back_button_pressed(): 
