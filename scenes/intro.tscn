@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ht7gg0vlsdnn"]
 
+[ext_resource type="Script" path="res://scripts/intro.gd" id="1_es01l"]
 [ext_resource type="Texture2D" uid="uid://cu2a03j3q468p" path="res://assets/sprites/Assets-nouveaux 3.png" id="1_wfs7u"]
 [ext_resource type="PackedScene" uid="uid://j54lupoylhq8" path="res://scenes/player.tscn" id="2_4bx60"]
 [ext_resource type="PackedScene" uid="uid://6pf6bokdsrhr" path="res://scenes/pnj.tscn" id="3_4bx60"]
@@ -550,6 +551,7 @@ _data = {
 }
 
 [node name="Intro" type="Node" unique_id=1765967347]
+script = ExtResource("1_es01l")
 
 [node name="scène intro" type="Node" parent="." unique_id=1901177568]
 
@@ -644,15 +646,15 @@ follow_viewport_enabled = true
 [node name="BandeHaut" type="ColorRect" parent="scène intro/CanvasLayer" unique_id=1083351680]
 offset_left = 1790.0
 offset_top = -178.0
-offset_right = 2948.0188
+offset_right = 2948.018
 offset_bottom = -94.0
 color = Color(0, 0, 0, 1)
 
 [node name="BandeBas" type="ColorRect" parent="scène intro/CanvasLayer" unique_id=1438789217]
 offset_left = 1792.0
 offset_top = 132.0
-offset_right = 2974.3325
-offset_bottom = 214.42534
+offset_right = 2974.3318
+offset_bottom = 214.42532
 color = Color(0, 0, 0, 1)
 
 [node name="rideau_ouverture" type="ColorRect" parent="scène intro" unique_id=13346939]

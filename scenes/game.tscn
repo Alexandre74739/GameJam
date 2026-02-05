@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cj228tfjd1h4r" path="res://scenes/kill_zone.tscn" id="8_gee14"]
 [ext_resource type="FontFile" uid="uid://kse5k46uoweq" path="res://assets/fonts/PixelOperator8.ttf" id="10_vtaks"]
 [ext_resource type="PackedScene" uid="uid://6pf6bokdsrhr" path="res://scenes/pnj.tscn" id="11_kvpfn"]
-[ext_resource type="Script" uid="uid://e2hbuw0abt1k" path="res://scripts/kill_counter.gd" id="12_dinhu"]
+[ext_resource type="Script" path="res://scripts/kill_counter.gd" id="12_dinhu"]
 [ext_resource type="PackedScene" path="res://scenes/portal.tscn" id="13_kvuet"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_kvpfn"]
