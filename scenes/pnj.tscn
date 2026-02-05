@@ -50,6 +50,7 @@
 [ext_resource type="Texture2D" uid="uid://ccp2gsx574xtc" path="res://assets/sprites/PNG Cold/Attacking/Glace_Attack_008.png" id="48_vpcv5"]
 [ext_resource type="Texture2D" uid="uid://b5vcorj6gt58o" path="res://assets/sprites/PNG Cold/Attacking/Glace_Attack_009.png" id="49_gt6eg"]
 [ext_resource type="Texture2D" uid="uid://2lkhp35fy8sy" path="res://assets/sprites/PNG Cold/Attacking/Glace_Attack_010.png" id="50_iw1s6"]
+[ext_resource type="AudioStream" uid="uid://b30asng3wcbxy" path="res://assets/sounds/dead.mp3" id="51_7m6te"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6yugu"]
 animations = [{
@@ -244,8 +245,7 @@ script = ExtResource("1_g66xb")
 position = Vector2(-6, -12)
 scale = Vector2(0.09312699, 0.095559455)
 sprite_frames = SubResource("SpriteFrames_6yugu")
-animation = &"idle-cold"
-frame_progress = 0.39204586
+animation = &"death"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=720533519]
 position = Vector2(-5, -12)
@@ -270,6 +270,9 @@ target_position = Vector2(-10, 0)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=706382744]
 navigation_polygon = SubResource("NavigationPolygon_g66xb")
+
+[node name="SfxDead" type="AudioStreamPlayer2D" parent="." unique_id=581517739]
+stream = ExtResource("51_7m6te")
 
 [connection signal="body_entered" from="Killzone" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Killzone" to="." method="_on_killzone_body_entered"]
