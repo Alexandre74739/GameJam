@@ -583,20 +583,20 @@ position = Vector2(65, -5)
 zoom = Vector2(3.2, 3.2)
 
 [node name="ColorRect" type="ColorRect" parent="scène intro" unique_id=599243889]
-offset_left = 2273.0
-offset_top = -31.0
-offset_right = 2395.0
-offset_bottom = -11.0
+offset_left = 2267.0
+offset_top = -64.0
+offset_right = 2418.0
+offset_bottom = -12.0
 
 [node name="Label" type="Label" parent="scène intro/ColorRect" unique_id=844773226]
 layout_mode = 0
-offset_left = 1.0
+offset_left = 2.0
 offset_top = 2.0
-offset_right = 121.0
-offset_bottom = 21.0
+offset_right = 145.0
+offset_bottom = 38.0
 tooltip_text = "Ça a l'air magique...\")."
 theme_override_colors/font_color = Color(0.19524238, 0.36777174, 0.54644144, 1)
-theme_override_font_sizes/font_size = 5
+theme_override_font_sizes/font_size = 10
 text = "blablabalblabalblabalblabalbl"
 autowrap_mode = 2
 
@@ -615,18 +615,18 @@ animation = &"idle-cold"
 [node name="BulePNJ" type="ColorRect" parent="scène intro" unique_id=1103775826]
 visible = false
 offset_left = 2401.0
-offset_top = -40.0
-offset_right = 2505.0
-offset_bottom = -18.0
+offset_top = -64.0
+offset_right = 2552.0
+offset_bottom = -14.0
 
 [node name="Label" type="Label" parent="scène intro/BulePNJ" unique_id=695637613]
 layout_mode = 0
 offset_left = 2.0
-offset_top = 1.0
-offset_right = 100.0
-offset_bottom = 17.0
+offset_top = 2.0
+offset_right = 127.0
+offset_bottom = 38.0
 theme_override_colors/font_color = Color(0.19607843, 0.36862746, 0.54509807, 1)
-theme_override_font_sizes/font_size = 6
+theme_override_font_sizes/font_size = 10
 text = "c donc toi le dernier survivant ?"
 autowrap_mode = 2
 
