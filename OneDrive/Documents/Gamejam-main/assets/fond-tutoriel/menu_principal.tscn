@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://bg0r1igdx48d"]
+
+[ext_resource type="Script" uid="uid://cm8dvqvsu6dva" path="res://assets/fond-tutoriel/menu_principal.gd" id="1_axgsx"]
+[ext_resource type="FontFile" uid="uid://c1ixcj2u8i5wu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_wu8wl"]
+
+[sub_resource type="Gradient" id="Gradient_61vmc"]
+offsets = PackedFloat32Array(0, 0.0025773195)
+colors = PackedColorArray(0, 0, 0, 1, 0.9999998, 0.10558555, 0.19440135, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ttuyp"]
+gradient = SubResource("Gradient_61vmc")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ud6jo"]
+font = ExtResource("1_wu8wl")
+font_size = 45
+font_color = Color(0, 0.7411765, 1, 1)
+
+[node name="menu principal" type="Control" unique_id=1592839607]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_axgsx")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1172585]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_ttuyp")
+
+[node name="Label" type="Label" parent="." unique_id=1532667554]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -95.0
+offset_top = 138.0
+offset_right = 98.0
+offset_bottom = 160.0
+grow_horizontal = 2
+text = "X-TRM Climate"
+label_settings = SubResource("LabelSettings_ud6jo")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1212045675]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = -55.0
+offset_right = 108.0
+offset_bottom = 234.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 100
+
+[node name="Btn-commencer" type="Button" parent="VBoxContainer" unique_id=1884967003]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_wu8wl")
+theme_override_font_sizes/font_size = 22
+text = "Commencer"
+
+[node name="Règle" type="Button" parent="VBoxContainer" unique_id=939165772]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_wu8wl")
+theme_override_font_sizes/font_size = 20
+text = "Règles"
+
+[node name="quitter" type="Button" parent="VBoxContainer" unique_id=380039268]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_wu8wl")
+theme_override_font_sizes/font_size = 20
+text = "Quitter"
+
+[connection signal="button_down" from="VBoxContainer/Btn-commencer" to="." method="_on_btncommencer_button_down"]
+[connection signal="button_down" from="VBoxContainer/Règle" to="." method="_on_règle_button_down"]
+[connection signal="button_down" from="VBoxContainer/quitter" to="." method="_on_quitter_button_down"]
