@@ -318,10 +318,10 @@ tracks/1/path = NodePath("scène intro/Player2:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 6, 32),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 6, 28.066668, 32),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(1757, -35), Vector2(2266, -35), Vector2(1752, -35)]
+"values": [Vector2(1757, -35), Vector2(2266, -35), Vector2(2266, -35), Vector2(1752, -35)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -402,10 +402,10 @@ tracks/8/path = NodePath("scène intro/Player2/AnimatedSprite2D:flip_h")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(29),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 28.1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [true]
+"values": [false, true]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
@@ -414,7 +414,7 @@ tracks/9/path = NodePath("scène intro/rideau_fin:modulate")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(32, 35),
+"times": PackedFloat32Array(29.633333, 32.566666),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -426,10 +426,10 @@ tracks/10/path = NodePath("scène intro/CanvasLayer/BandeHaut:position")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(0, 1.2),
+"times": PackedFloat32Array(0, 1.975915),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1790, -178), Vector2(1780, -89)]
+"values": [Vector2(1790, -178), Vector2(1790, -124)]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
@@ -438,10 +438,10 @@ tracks/11/path = NodePath("scène intro/CanvasLayer/BandeBas:position")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
-"times": PackedFloat32Array(0, 1.2),
+"times": PackedFloat32Array(0, 2.0102787),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1792, 132), Vector2(1783, 63)]
+"values": [Vector2(1792, 132), Vector2(1784, 23)]
 }
 tracks/12/type = "value"
 tracks/12/imported = false
@@ -450,7 +450,7 @@ tracks/12/path = NodePath("scène intro/rideau_ouverture:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
-"times": PackedFloat32Array(0, 2),
+"times": PackedFloat32Array(0.23333333, 7.0666666),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
@@ -488,6 +488,8 @@ flip_h = true
 position = Vector2(-1, 14)
 
 [node name="Camera2D" type="Camera2D" parent="scène intro/Player2" unique_id=1732048913]
+position = Vector2(28.903076, 22)
+zoom = Vector2(3.2, 3.2)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="scène intro" unique_id=1860501464]
 root_node = NodePath("../..")
@@ -501,6 +503,7 @@ offset_right = 2383.0
 offset_bottom = -54.0
 
 [node name="Label" type="Label" parent="scène intro/ColorRect" unique_id=844773226]
+texture_filter = 2
 layout_mode = 0
 offset_left = 1.0
 offset_top = 2.0
@@ -518,7 +521,7 @@ scale = Vector2(-1, 1)
 script = null
 
 [node name="AnimatedSprite2D" parent="scène intro/PNJ" index="0" unique_id=1184989489]
-frame_progress = 0.019580042
+frame_progress = 0.003358517
 
 [node name="BulePNJ" type="ColorRect" parent="scène intro" unique_id=1103775826]
 visible = false
@@ -546,19 +549,21 @@ offset_bottom = 93.0
 color = Color(0, 0, 0, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="scène intro" unique_id=547630847]
+layer = 4
+follow_viewport_enabled = true
 
 [node name="BandeHaut" type="ColorRect" parent="scène intro/CanvasLayer" unique_id=1083351680]
 offset_left = 1790.0
 offset_top = -178.0
-offset_right = 2936.992
+offset_right = 2937.0237
 offset_bottom = -144.0
 color = Color(0, 0, 0, 1)
 
 [node name="BandeBas" type="ColorRect" parent="scène intro/CanvasLayer" unique_id=1438789217]
 offset_left = 1792.0
 offset_top = 132.0
-offset_right = 2944.999
-offset_bottom = 166.00006
+offset_right = 2950.02
+offset_bottom = 170.0
 color = Color(0, 0, 0, 1)
 
 [node name="rideau_ouverture" type="ColorRect" parent="scène intro" unique_id=13346939]
