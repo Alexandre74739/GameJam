@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="GameJam"
-run/main_scene="uid://c5l74pa8w8444"
+run/main_scene="uid://ht7gg0vlsdnn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 
 [autoload]
