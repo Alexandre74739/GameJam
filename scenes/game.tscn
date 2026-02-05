@@ -317,6 +317,13 @@ texture = ExtResource("1_uwrxv")
 [sub_resource type="TileSet" id="TileSet_lbhrr"]
 sources/0 = SubResource("TileSetAtlasSource_lnu2h")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trtic"]
+bg_color = Color(0.07058824, 0.07058824, 0.06666667, 0.78431374)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vtaks"]
 content_margin_left = 10.0
 content_margin_top = 10.0
@@ -341,9 +348,6 @@ font_size = 24
 [sub_resource type="LabelSettings" id="LabelSettings_kvpfn"]
 font = ExtResource("10_vtaks")
 font_size = 24
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ir15t"]
-bg_color = Color(0.56078434, 0.5254902, 0.5137255, 0.69411767)
 
 [node name="Game" type="Node2D" unique_id=1053242947]
 script = ExtResource("1_0tnpc")
@@ -489,6 +493,19 @@ position = Vector2(-46, 134)
 [node name="TempTimer" type="Timer" parent="UI" unique_id=1409723408]
 autostart = true
 
+[node name="BackButton" type="Button" parent="UI" unique_id=421770234]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -219.0
+offset_bottom = 64.0
+grow_horizontal = 0
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("14_trtic")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_trtic")
+text = "Quitter"
+
 [node name="HUD_Cadre" type="PanelContainer" parent="UI" unique_id=140393055]
 anchors_preset = 5
 anchor_left = 0.5
@@ -556,17 +573,7 @@ script = ExtResource("12_dinhu")
 [node name="Portal" parent="." unique_id=1177514796 instance=ExtResource("13_kvuet")]
 position = Vector2(503, -143)
 
-[node name="BackButton" type="Button" parent="." unique_id=421770234]
-offset_left = 1747.0
-offset_top = 2.0
-offset_right = 1918.0
-offset_bottom = 50.0
-size_flags_vertical = 3
-theme_override_fonts/font = ExtResource("14_trtic")
-theme_override_font_sizes/font_size = 25
-theme_override_styles/hover = SubResource("StyleBoxFlat_ir15t")
-text = "Quitter"
-
 [connection signal="body_entered" from="Levier" to="Player" method="_on_coin_body_entered"]
 [connection signal="body_entered" from="Levier" to="Levier" method="_on_body_entered"]
 [connection signal="timeout" from="UI/TempTimer" to="." method="_on_temp_timer_timeout"]
+[connection signal="button_down" from="UI/BackButton" to="." method="_on_back_button_button_down"]

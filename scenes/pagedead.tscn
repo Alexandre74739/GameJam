@@ -5,20 +5,26 @@
 
 [sub_resource type="Gradient" id="Gradient_8ldfu"]
 offsets = PackedFloat32Array(0)
-colors = PackedColorArray(0.72464263, 0.72464263, 0.72464246, 0.6313726)
+colors = PackedColorArray(0.72, 0.72, 0.72, 0.4509804)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_hbcku"]
 gradient = SubResource("Gradient_8ldfu")
 
 [sub_resource type="Theme" id="Theme_e1mqi"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ldfu"]
+bg_color = Color(0.07058824, 0.07058824, 0.06666667, 0.78431374)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_06qmi"]
 bg_color = Color(0.56078434, 0.5254902, 0.5137255, 0.69411767)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hbcku"]
+bg_color = Color(0.07058824, 0.07058824, 0.06666667, 0.78431374)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7tep5"]
 bg_color = Color(0.56078434, 0.5254902, 0.5137255, 0.69411767)
 
-[node name="Pagedead" type="Node2D" unique_id=1890967865]
+[node name="Pagerègles" type="Node2D" unique_id=1890967865]
 script = ExtResource("1_8ldfu")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=818659222]
@@ -48,6 +54,7 @@ size_flags_vertical = 3
 theme = SubResource("Theme_e1mqi")
 theme_override_fonts/font = ExtResource("1_xy22t")
 theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_8ldfu")
 theme_override_styles/hover = SubResource("StyleBoxFlat_06qmi")
 text = "Rejouer
 "
@@ -57,6 +64,7 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("1_xy22t")
 theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_hbcku")
 theme_override_styles/hover = SubResource("StyleBoxFlat_7tep5")
 text = "Menu"
 

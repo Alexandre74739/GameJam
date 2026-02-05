@@ -8,22 +8,22 @@
 [sub_resource type="Theme" id="Theme_w5ui5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w5ui5"]
-bg_color = Color(0.5686275, 0.5686275, 0.5686275, 1)
+bg_color = Color(0.07058824, 0.07058824, 0.06666667, 0.78431374)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qcl6i"]
 bg_color = Color(0.28201902, 0.30385834, 0.3149351, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nxt0m"]
-bg_color = Color(0.5686275, 0.5686275, 0.5686275, 1)
+bg_color = Color(0.07058824, 0.07058824, 0.06666667, 0.78431374)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iep14"]
-bg_color = Color(0, 1, 1, 1)
+bg_color = Color(0.28235295, 0.3019608, 0.3137255, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2xgxd"]
-bg_color = Color(0.5673677, 0.56736773, 0.5673676, 1)
+bg_color = Color(0.07058824, 0.07058824, 0.06666667, 0.78431374)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_486ty"]
-bg_color = Color(0, 1, 1, 1)
+bg_color = Color(0.28235295, 0.3019608, 0.3137255, 1)
 
 [node name="MenuPrincipal" type="Control" unique_id=114411050]
 layout_mode = 3
@@ -79,7 +79,8 @@ theme_override_fonts/font = ExtResource("3_486ty")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_nxt0m")
 theme_override_styles/hover = SubResource("StyleBoxFlat_iep14")
-text = "Règles"
+text = "Règles de jeux
+"
 
 [node name="BackButton" type="Button" parent="VBoxContainer" unique_id=1537580516]
 layout_mode = 2

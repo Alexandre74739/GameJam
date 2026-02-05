@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://cif3f68kg616m"]
 
 [ext_resource type="Script" uid="uid://whkkfwrjjqur" path="res://page_crédits.gd" id="1_0pjoj"]
-[ext_resource type="Texture2D" uid="uid://l71gwqjbn65l" path="res://assets/sprites/Fond glacé.png" id="2_0pjoj"]
 [ext_resource type="FontFile" uid="uid://c1ixcj2u8i5wu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_hdx5m"]
+[ext_resource type="Texture2D" uid="uid://cmxba60t124yy" path="res://assets/sprites/fond-page-crédit.jpeg" id="2_jhcdh"]
 [ext_resource type="Texture2D" uid="uid://csqulfpinqp7g" path="res://assets/sprites/Flèche.png" id="4_jhcdh"]
 [ext_resource type="Texture2D" uid="uid://udqh1hc0vqh0" path="res://assets/sprites/school.png" id="5_6r2qa"]
 
 [sub_resource type="Gradient" id="Gradient_hdx5m"]
 offsets = PackedFloat32Array(1)
-colors = PackedColorArray(1, 1, 1, 0.4117647)
+colors = PackedColorArray(1, 1, 1, 0.73333335)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_0pjoj"]
 gradient = SubResource("Gradient_hdx5m")
@@ -17,11 +17,11 @@ gradient = SubResource("Gradient_hdx5m")
 position = Vector2(-4, -2)
 script = ExtResource("1_0pjoj")
 
-[node name="FondGlacé" type="Sprite2D" parent="." unique_id=49335414]
-modulate = Color(1, 1, 1, 0.5372549)
-position = Vector2(964, 542)
-scale = Vector2(2.2758532, 2.2583892)
-texture = ExtResource("2_0pjoj")
+[node name="FondPageCrédit" type="Sprite2D" parent="." unique_id=404986907]
+modulate = Color(1, 1, 1, 0.4)
+position = Vector2(971.0715, 542.25)
+scale = Vector2(0.75195307, 0.5979352)
+texture = ExtResource("2_jhcdh")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=124538892]
 offset_left = -55.0
