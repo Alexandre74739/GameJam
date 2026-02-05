@@ -259,6 +259,30 @@ tracks/9/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("scène intro/CanvasLayer/BandeHaut:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1790, -178)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("scène intro/CanvasLayer/BandeBas:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1792, 132)]
+}
 
 [sub_resource type="Animation" id="Animation_yjqpq"]
 resource_name = "arrivee_perso"
@@ -383,6 +407,30 @@ tracks/9/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("scène intro/CanvasLayer/BandeHaut:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1790, -178), Vector2(1780, -89)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("scène intro/CanvasLayer/BandeBas:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1792, 132), Vector2(1783, 63)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_i2l1n"]
 _data = {
@@ -446,7 +494,7 @@ scale = Vector2(-1, 1)
 script = null
 
 [node name="AnimatedSprite2D" parent="scène intro/PNJ" index="0" unique_id=1184989489]
-frame_progress = 0.22527885
+frame_progress = 0.69310373
 
 [node name="BulePNJ" type="ColorRect" parent="scène intro" unique_id=1103775826]
 visible = false
@@ -471,6 +519,22 @@ offset_left = 1723.0
 offset_top = -94.0
 offset_right = 2999.0
 offset_bottom = 93.0
+color = Color(0, 0, 0, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="scène intro" unique_id=547630847]
+
+[node name="BandeHaut" type="ColorRect" parent="scène intro/CanvasLayer" unique_id=1083351680]
+offset_left = 1790.0
+offset_top = -178.0
+offset_right = 2937.0
+offset_bottom = -144.0
+color = Color(0, 0, 0, 1)
+
+[node name="BandeBas" type="ColorRect" parent="scène intro/CanvasLayer" unique_id=1438789217]
+offset_left = 1792.0
+offset_top = 132.0
+offset_right = 2945.0
+offset_bottom = 166.0
 color = Color(0, 0, 0, 1)
 
 [editable path="scène intro/Player2"]
