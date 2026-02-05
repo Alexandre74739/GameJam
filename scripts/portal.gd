@@ -7,6 +7,7 @@ func _ready():
 	monitoring = false 
 	# Optionnel : désactive aussi le collider physiquement pour être sûr
 	$CollisionShape2D.set_deferred("disabled", true)
+	self.connect("body_entered", _on_body_entered)
 
 func appear():
 	# APRÈS : Appelée par le WaveManager
@@ -20,3 +21,7 @@ func appear():
 		$AnimatedSprite2D.play("default")
 	
 	print("Portail activé visuellement et physiquement !")
+
+func _on_body_entered(body : Node2D):
+	if body.is_in_group("Player") and WaveManager.portal_unlocked: 
+		get_tree().change_scene_to_file("res://scenes/world_story.tscn")

@@ -7,6 +7,11 @@ var current_enemies_count = 0
 var total_kills = 0
 var portal_unlocked = false
 
+func reset ():
+	current_enemies_count = 0
+	total_kills = 0
+	portal_unlocked = false
+
 func _ready():
 	await get_tree().create_timer(1.0).timeout
 	spawn_enemy()
