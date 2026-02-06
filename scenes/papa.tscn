@@ -1,5 +1,6 @@
-[gd_scene format=3 uid="uid://c86b4s78vajo7"]
+[gd_scene format=3 uid="uid://dkyn4lpynchsy"]
 
+[ext_resource type="Script" uid="uid://cqk2svw6j71gn" path="res://scripts/papa.gd" id="1_6jw76"]
 [ext_resource type="Texture2D" uid="uid://6wu36accco3t" path="res://assets/sprites/main-character.png" id="1_25ls3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6jw76"]
@@ -41,7 +42,14 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_25ls3"]
 size = Vector2(134, 34)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6jw76"]
+bg_color = Color(0, 0, 0, 0.5803922)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u7jf6"]
+size = Vector2(146, 34)
+
 [node name="Papa" type="CharacterBody2D" unique_id=2094738634]
+script = ExtResource("1_6jw76")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=593499252]
 position = Vector2(0.9999995, -3.4999995)
@@ -53,3 +61,28 @@ frame_progress = 0.06159062
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=506405264]
 position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_25ls3")
+
+[node name="BullePapa" type="Panel" parent="." unique_id=1622066354]
+visible = false
+offset_left = 4.0
+offset_top = -52.0
+offset_right = 123.0
+offset_bottom = -18.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6jw76")
+
+[node name="textePapa" type="Label" parent="BullePapa" unique_id=1726840759]
+layout_mode = 1
+offset_left = 4.0
+offset_top = 1.0
+offset_right = 118.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(1, 0.57, 0.66316664, 1)
+theme_override_font_sizes/font_size = 8
+text = "Je sais, mon fils. C'est fini maintenant"
+autowrap_mode = 2
+
+[node name="ZoneDialogue" type="Area2D" parent="." unique_id=1158866879]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZoneDialogue" unique_id=2070524991]
+position = Vector2(57, -2)
+shape = SubResource("RectangleShape2D_u7jf6")

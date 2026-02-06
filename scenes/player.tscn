@@ -278,6 +278,13 @@ height = 28.0
 radius = 15.0
 height = 34.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qhqgy"]
+bg_color = Color(0.14901961, 0.2, 0.29803923, 0.8509804)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dqkch"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+corner_detail = 18
+
 [node name="Player" type="CharacterBody2D" unique_id=1712431102]
 script = ExtResource("1_g2els")
 
@@ -302,5 +309,24 @@ monitoring = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=1738087871]
 position = Vector2(5, 1)
 shape = SubResource("CapsuleShape2D_qhqgy")
+
+[node name="BulleFils" type="Panel" parent="." unique_id=1955652373]
+visible = false
+offset_left = 2.0
+offset_top = -35.0
+offset_right = 94.0
+offset_bottom = -12.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qhqgy")
+
+[node name="texteFils" type="Label" parent="BulleFils" unique_id=1589578338]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 92.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_dqkch")
+text = "PAPA l'eau arrive !"
+autowrap_mode = 2
 
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
