@@ -8,7 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://dv4ri8llbjglh" path="res://assets/music/Isabellas Lullaby x Trisha’s Lullaby - Cello Version The Promised Neverland x FMAB.wav" id="4_janx1"]
 [ext_resource type="PackedScene" uid="uid://cj0bfwb42hw34" path="res://scenes/platform_chaud.tscn" id="5_swj4v"]
 [ext_resource type="PackedScene" uid="uid://dy8c06kynuvf8" path="res://scenes/platform_froid.tscn" id="8_ljxil"]
-[ext_resource type="PackedScene" uid="uid://c86b4s78vajo7" path="res://scenes/papa.tscn" id="9_c58vp"]
+[ext_resource type="PackedScene" uid="uid://dkyn4lpynchsy" path="res://scenes/papa.tscn" id="9_c58vp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5qny8"]
 texture = ExtResource("1_8ebjn")
@@ -762,3 +762,4 @@ position = Vector2(718, -2232)
 
 [node name="Papa" parent="." unique_id=2094738634 instance=ExtResource("9_c58vp")]
 position = Vector2(513, -2338)
+script = null
