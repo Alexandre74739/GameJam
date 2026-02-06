@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://detyphfjtb5qp"]
 
-[ext_resource type="Script" path="res://scenes/pagedead.gd" id="1_8ldfu"]
+[ext_resource type="Script" uid="uid://d1iy7ycbv0acb" path="res://scenes/pagedead.gd" id="1_8ldfu"]
 [ext_resource type="FontFile" uid="uid://c1ixcj2u8i5wu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_xy22t"]
 
 [sub_resource type="Gradient" id="Gradient_8ldfu"]
-offsets = PackedFloat32Array(0, 0.50721157)
-colors = PackedColorArray(0.72, 0.72, 0.72, 0.4509804, 0.72, 0.72, 0.72, 0.3372549)
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.39, 0.39, 0.39, 0.41568628)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_hbcku"]
 gradient = SubResource("Gradient_8ldfu")
