@@ -82,8 +82,19 @@ func die():
 	call_deferred("reset_game")
 
 func reset_game():
-	$"/root/WaveManager".reset()
-	get_tree().change_scene_to_file("res://scenes/pagedead.tscn")
+	# Mettre le jeu en pause
+	get_tree().paused = true
+	
+	# Créer un CanvasLayer pour afficher par-dessus tout
+	var canvas_layer = CanvasLayer.new()
+	canvas_layer.layer = 100  # Au-dessus de tout
+	canvas_layer.process_mode = Node.PROCESS_MODE_ALWAYS  # Continue à fonctionner même en pause
+	get_tree().root.add_child(canvas_layer)
+	
+	# Charger et afficher la page dead
+	var dead_scene = load("res://scenes/pagedead.tscn").instantiate()
+	dead_scene.process_mode = Node.PROCESS_MODE_ALWAYS  # Les boutons fonctionnent en pause
+	canvas_layer.add_child(dead_scene)
 
 # Assure-toi que ce signal est bien connecté dans l'éditeur
 func _on_attack_area_body_entered(body: Node2D) -> void:
