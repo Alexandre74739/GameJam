@@ -285,7 +285,7 @@ bg_color = Color(0.14901961, 0.2, 0.29803923, 0.8509804)
 bg_color = Color(0.6, 0.6, 0.6, 0)
 corner_detail = 18
 
-[node name="Player" type="CharacterBody2D" unique_id=1712431102]
+[node name="Player" type="CharacterBody2D" groups=["Player"] unique_id=1712431102]
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1293317599]
