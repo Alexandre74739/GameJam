@@ -105,6 +105,13 @@ texture = ExtResource("1_wfs7u")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_es01l")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_player"]
+bg_color = Color(1, 1, 1, 0.8)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
 [sub_resource type="Animation" id="Animation_vtaks"]
 length = 0.001
 tracks/0/type = "value"
@@ -361,7 +368,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(6.3, 7.5075684, 9, 14.094609, 21.8, 24.233334, 26.466667),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": ["blablabalblabalblabalblabalbl", "2 eme phrase", "3 eme phrase ", "qui est tu ? ", "j'avais prevenu mon espece, sur cete utilisation, personne m'ecoutai", "je me batterai pour rester debout , tu peut ramenez qui tu veut", "peut m'importe et bon courage !"]
+"values": ["Quel monde étrange... tout a changé", "Où sont passés les gens de mon espèce ?", "Que s'est-il passé ici ?", "Qui es-tu ?", "On savait pour la pollution. Personne écoutait", "Je ne peux pas changer le passé, mais je vais me battre pour rester debout", "C'est la faute de mon espèce... Mais je ne me laisserai pas tuer sans rien faire"]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -421,7 +428,7 @@ tracks/7/keys = {
 "times": PackedFloat32Array(13.157144, 15.209129, 17.666666, 19.8),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": ["c donc toi le dernier survivant ?", "Depuis des année nous vous prevenons sur l'usage des IA", "personne nous prenais au serieux . voici le fruit de vos actes", "et nous sommes venu tous vous tuez ! ahh !!"]
+"values": ["T'es le dernier de ton espèce ?", "Nous, les mutants, on est nés du climat détruit. La Terre se venge", "Votre pollution et vos excès nous ont créés. Le climat nous a mutés", "Vous avez tout brûlé pour votre confort... Maintenant on vient vous éliminer !"]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
@@ -550,6 +557,13 @@ _data = {
 &"arrivee_perso": SubResource("Animation_yjqpq")
 }
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pnj"]
+bg_color = Color(1, 1, 1, 0.8)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
 [node name="Intro" type="Node" unique_id=1765967347]
 script = ExtResource("1_es01l")
 
@@ -582,11 +596,12 @@ position = Vector2(-1, 14)
 position = Vector2(65, -5)
 zoom = Vector2(3.2, 3.2)
 
-[node name="ColorRect" type="ColorRect" parent="scène intro" unique_id=599243889]
+[node name="ColorRect" type="Panel" parent="scène intro" unique_id=599243889]
 offset_left = 2267.0
 offset_top = -64.0
 offset_right = 2418.0
 offset_bottom = -12.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_player")
 
 [node name="Label" type="Label" parent="scène intro/ColorRect" unique_id=844773226]
 layout_mode = 0
@@ -612,12 +627,13 @@ script = null
 [node name="AnimatedSprite2D" parent="scène intro/PNJ" index="0" unique_id=1184989489]
 animation = &"idle-cold"
 
-[node name="BulePNJ" type="ColorRect" parent="scène intro" unique_id=1103775826]
+[node name="BulePNJ" type="Panel" parent="scène intro" unique_id=1103775826]
 visible = false
 offset_left = 2401.0
 offset_top = -64.0
 offset_right = 2552.0
 offset_bottom = -14.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_pnj")
 
 [node name="Label" type="Label" parent="scène intro/BulePNJ" unique_id=695637613]
 layout_mode = 0
@@ -645,15 +661,15 @@ follow_viewport_enabled = true
 [node name="BandeHaut" type="ColorRect" parent="scène intro/CanvasLayer" unique_id=1083351680]
 offset_left = 1790.0
 offset_top = -178.0
-offset_right = 2948.0234
+offset_right = 2948.0215
 offset_bottom = -94.0
 color = Color(0, 0, 0, 1)
 
 [node name="BandeBas" type="ColorRect" parent="scène intro/CanvasLayer" unique_id=1438789217]
 offset_left = 1792.0
 offset_top = 132.0
-offset_right = 2974.3306
-offset_bottom = 214.42574
+offset_right = 2974.333
+offset_bottom = 214.42592
 color = Color(0, 0, 0, 1)
 
 [node name="rideau_ouverture" type="ColorRect" parent="scène intro" unique_id=13346939]
