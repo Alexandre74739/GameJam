@@ -13,9 +13,9 @@ extends Node2D
 	"Plus haut... toujours plus haut...",                          # Index 4 (Y)
 	"L'océan ne monte pas : il reprend ce que nous lui avons volé.",# Index 5 (Y)
 	"Chaque degré gagné a été payé par une espèce disparue.",       # Index 6 (Y)
-	"Nous avons brûlé le futur pour éclairer nos centres commerciaux.", # Index 7 (Y)
+	"Nous avons brûlé le futur pour rien.", # Index 7 (Y)
 	"La chaleur a fondu les glaces, le froid a gelé nos cœurs.",     # Index 8 (Y)
-	"L'ADN n'a pas survécu à la torture du climat : les mutants sont nés.", # Index 9 (Y)
+	"L'ADN n'a pas survécu au climat : les mutants sont nés.", # Index 9 (Y)
 	"Les mutants ne sont pas des monstres, mais notre reflet.",     # Index 10 (Y)
 	"Le plastique dans nos veines, la poussière dans nos poumons.",  # Index 11 (Y)
 	"La croissance infinie était un suicide collectif.",            # Index 12 (Y)
@@ -32,16 +32,16 @@ extends Node2D
 	Vector2(450, 0),    # Texte 2 : Les mutants sont les cicatrices
 	Vector2(0, -150),   # Texte 3 : L'Apocalypse (Tout début de la montée)
 	Vector2(0, -300),   # Texte 4 : Sortie immédiate de la zone basse
-	Vector2(0, -500),   # Texte 5 : Premier palier de plateformes
+	Vector2(0, -400),   # Texte 5 : Premier palier de plateformes
 	Vector2(0, -700),   # Texte 6 : Ascension vers le premier tiers
 	Vector2(0, -900),   # Texte 7 : La pollution
-	Vector2(0, -1100),  # Texte 8 : Le vide commence
-	Vector2(0, -1300),  # Texte 9 : Les mutants (milieu du parcours)
-	Vector2(0, -1500),  # Texte 10 : Réflexion sur nous-mêmes
-	Vector2(0, -1700),  # Texte 11 : Le plastique dans les veines
-	Vector2(0, -1900),  # Texte 12 : La croissance infinie
-	Vector2(0, -2100),  # Texte 13 : Presque au sommet (Y=-2100)
-	Vector2(0, -2200),  # Texte 14 : Message final tout en haut !
+	Vector2(0, -1000),  # Texte 8 : Le vide commence
+	Vector2(0, -1200),  # Texte 9 : Les mutants (milieu du parcours)
+	Vector2(0, -1400),  # Texte 10 : Réflexion sur nous-mêmes
+	Vector2(0, -1600),  # Texte 11 : Le plastique dans les veines
+	Vector2(0, -1800),  # Texte 12 : La croissance infinie
+	Vector2(0, -2000),  # Texte 13 : Presque au sommet (Y=-2000)
+	Vector2(0, -2100),  # Texte 14 : Message final tout en haut !
 ]
 
 @export var text_duration = 5.0 # Un peu plus long pour laisser le temps de lire

@@ -762,6 +762,7 @@ position = Vector2(718, -2194)
 position = Vector2(718, -2232)
 
 [node name="Papa" parent="." unique_id=2094738634 instance=ExtResource("9_c58vp")]
+<<<<<<< HEAD
 position = Vector2(496, -2286)
 
 [node name="RideauFin" type="CanvasLayer" parent="." unique_id=318758048]
@@ -797,3 +798,7 @@ Mais survivre... ce n'est pas vivre."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+=======
+position = Vector2(513, -2338)
+script = null
+>>>>>>> d0487ef0f18165fd9d8ccd64211a591afe336cb5
