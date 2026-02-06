@@ -64,20 +64,20 @@ shape = SubResource("RectangleShape2D_25ls3")
 
 [node name="BullePapa" type="Panel" parent="." unique_id=1622066354]
 visible = false
-offset_left = 4.0
-offset_top = -52.0
-offset_right = 123.0
-offset_bottom = -18.0
+offset_left = -20.0
+offset_top = -75.0
+offset_right = 180.0
+offset_bottom = -15.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_6jw76")
 
 [node name="textePapa" type="Label" parent="BullePapa" unique_id=1726840759]
 layout_mode = 1
-offset_left = 4.0
-offset_top = 1.0
-offset_right = 118.0
-offset_bottom = 32.0
+offset_left = 5.0
+offset_top = 3.0
+offset_right = 195.0
+offset_bottom = 57.0
 theme_override_colors/font_color = Color(1, 0.57, 0.66316664, 1)
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 10
 text = "Je sais, mon fils. C'est fini maintenant"
 autowrap_mode = 2
 

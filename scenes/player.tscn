@@ -312,19 +312,20 @@ shape = SubResource("CapsuleShape2D_qhqgy")
 
 [node name="BulleFils" type="Panel" parent="." unique_id=1955652373]
 visible = false
-offset_left = 2.0
-offset_top = -35.0
-offset_right = 94.0
-offset_bottom = -12.0
+offset_left = -20.0
+offset_top = -60.0
+offset_right = 180.0
+offset_bottom = -5.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_qhqgy")
 
 [node name="texteFils" type="Label" parent="BulleFils" unique_id=1589578338]
 layout_mode = 0
-offset_top = 1.0
-offset_right = 92.0
-offset_bottom = 22.0
+offset_left = 5.0
+offset_top = 3.0
+offset_right = 195.0
+offset_bottom = 52.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 11
 theme_override_styles/normal = SubResource("StyleBoxFlat_dqkch")
 text = "PAPA l'eau arrive !"
 autowrap_mode = 2

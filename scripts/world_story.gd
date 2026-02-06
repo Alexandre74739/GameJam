@@ -27,6 +27,9 @@ extends Node2D
 # À partir de l'index 3, seul le Y (négatif) déclenche le texte.
 @export var text_trigger_positions: Array[Vector2] = [
 	# Phase d'introduction au sol (déplacement horizontal)
+	Vector2(100, 0),    # Texte 0 : 2099 Le point de non-retour
+	Vector2(300, 0),    # Texte 1 : Jour de dépassement
+	Vector2(450, 0),    # Texte 2 : Les mutants sont les cicatrices
 	Vector2(0, -150),   # Texte 3 : L'Apocalypse (Tout début de la montée)
 	Vector2(0, -300),   # Texte 4 : Sortie immédiate de la zone basse
 	Vector2(0, -500),   # Texte 5 : Premier palier de plateformes

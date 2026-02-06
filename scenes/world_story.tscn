@@ -8,7 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://dv4ri8llbjglh" path="res://assets/music/Isabellas Lullaby x Trisha’s Lullaby - Cello Version The Promised Neverland x FMAB.wav" id="4_janx1"]
 [ext_resource type="PackedScene" uid="uid://cj0bfwb42hw34" path="res://scenes/platform_chaud.tscn" id="5_swj4v"]
 [ext_resource type="PackedScene" uid="uid://dy8c06kynuvf8" path="res://scenes/platform_froid.tscn" id="8_ljxil"]
-[ext_resource type="PackedScene" uid="uid://c86b4s78vajo7" path="res://scenes/papa.tscn" id="9_c58vp"]
+[ext_resource type="PackedScene" uid="uid://dkyn4lpynchsy" path="res://scenes/papa.tscn" id="9_c58vp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5qny8"]
 texture = ExtResource("1_8ebjn")
@@ -517,7 +517,7 @@ layer_1/tile_data = PackedInt32Array(65532, 0, 0, 65533, 0, 0, 65534, 0, 0, 6553
 
 [node name="Player" parent="." unique_id=1712431102 groups=["Player"] instance=ExtResource("3_kiuhd")]
 z_index = 2
-position = Vector2(-72, -50)
+position = Vector2(-73, -30)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1421777792]
 zoom = Vector2(6, 6)
@@ -525,6 +525,7 @@ zoom = Vector2(6, 6)
 [node name="MusicGenerale" type="AudioStreamPlayer2D" parent="." unique_id=1071061327]
 stream = ExtResource("4_janx1")
 autoplay = true
+max_distance = 20000000.0
 
 [node name="PlatformsFixe" type="Node" parent="." unique_id=552417278]
 
@@ -761,4 +762,38 @@ position = Vector2(718, -2194)
 position = Vector2(718, -2232)
 
 [node name="Papa" parent="." unique_id=2094738634 instance=ExtResource("9_c58vp")]
-position = Vector2(513, -2338)
+position = Vector2(496, -2286)
+
+[node name="RideauFin" type="CanvasLayer" parent="." unique_id=318758048]
+layer = 100
+visible = false
+
+[node name="Noir" type="ColorRect" parent="RideauFin" unique_id=314417427]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="texte fin" type="Label" parent="RideauFin" unique_id=219795478]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -600.0
+offset_top = -100.0
+offset_right = 600.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 42
+text = "Seul le fils a survécu au dérèglement.
+
+Mais survivre... ce n'est pas vivre."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

@@ -24,9 +24,11 @@ func _ready():
 	$ZoneDialogue.body_entered.connect(_on_zone_dialogue_body_entered)
 
 func _on_zone_dialogue_body_entered(body):
-	if body.name == "Player" and not dialogue_termine:
+	if body.name == "Player" and not dialogue_termine and not dialogue_actif:
 		player_ref = body
 		dialogue_actif = true
+		# Attendre 2 secondes avant de commencer le dialogue
+		await get_tree().create_timer(2.0).timeout
 		afficher_dialogue()
 
 func calculer_duree_lecture(texte: String) -> float:
@@ -59,8 +61,47 @@ func afficher_dialogue():
 		index_dialogue += 1
 		afficher_dialogue()
 	else:
-		# Dialogue terminé
+		# Dialogue terminé - cacher les bulles
 		dialogue_termine = true
 		bulle_papa.visible = false
 		if player_ref and player_ref.has_node("BulleFils"):
 			player_ref.get_node("BulleFils").visible = false
+		
+		# Attendre 1 seconde puis lancer le rideau de fin
+		await get_tree().create_timer(1.0).timeout
+		lancer_fin()
+
+func lancer_fin():
+	# Récupérer le rideau de fin depuis la scène
+	var rideau_fin = get_tree().current_scene.get_node_or_null("RideauFin")
+	
+	if rideau_fin:
+		var noir = rideau_fin.get_node_or_null("Noir")
+		var texte_fin = rideau_fin.get_node_or_null("texte fin")
+		
+		# Afficher le rideau
+		rideau_fin.visible = true
+		
+		# Fondu noir progressif (3 secondes)
+		if noir:
+			var temps_fondu = 3.0
+			var etapes = 60
+			var increment = 1.0 / etapes
+			
+			for i in range(etapes):
+				noir.modulate.a = i * increment
+				await get_tree().create_timer(temps_fondu / etapes).timeout
+		
+		# Attendre 1 seconde
+		await get_tree().create_timer(1.0).timeout
+		
+		# Afficher le texte final au centre
+		if texte_fin:
+			texte_fin.visible = true
+			print("✅ Texte final affiché")
+		else:
+			print("❌ Texte final introuvable!")
+		
+		# Attendre 5 secondes puis retour au menu
+		await get_tree().create_timer(5.0).timeout
+		get_tree().change_scene_to_file("res://scenes/menu_principal.tscn")
