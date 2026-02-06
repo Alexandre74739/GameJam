@@ -449,7 +449,7 @@ tracks/9/path = NodePath("scène intro/rideau_fin:modulate")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(26.9, 32.566666),
+"times": PackedFloat32Array(27.766666, 32.566666),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -661,7 +661,7 @@ follow_viewport_enabled = true
 [node name="BandeHaut" type="ColorRect" parent="scène intro/CanvasLayer" unique_id=1083351680]
 offset_left = 1790.0
 offset_top = -178.0
-offset_right = 2948.0215
+offset_right = 2948.0222
 offset_bottom = -94.0
 color = Color(0, 0, 0, 1)
 
@@ -669,7 +669,7 @@ color = Color(0, 0, 0, 1)
 offset_left = 1792.0
 offset_top = 132.0
 offset_right = 2974.333
-offset_bottom = 214.42592
+offset_bottom = 214.42593
 color = Color(0, 0, 0, 1)
 
 [node name="rideau_ouverture" type="ColorRect" parent="scène intro" unique_id=13346939]
