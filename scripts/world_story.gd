@@ -26,21 +26,19 @@ extends Node2D
 # Les positions X ne comptent que pour les index 0, 1, 2.
 # À partir de l'index 3, seul le Y (négatif) déclenche le texte.
 @export var text_trigger_positions: Array[Vector2] = [
-	Vector2(200, 0),    # Texte 0 (X > 200)
-	Vector2(500, 0),    # Texte 1 (X > 500)
-	Vector2(800, 0),    # Texte 2 (X > 800)
-	Vector2(0, -200),   # Texte 3 (Y < -200)
-	Vector2(0, -600),   # Texte 4 (Y < -600)
-	Vector2(0, -1200),  # Texte 5 (Y < -1200)
-	Vector2(0, -1800),  # Texte 6 (Y < -1800)
-	Vector2(0, -2500),  # Texte 7 (Y < -2500)
-	Vector2(0, -3200),  # Texte 8 (Y < -3200)
-	Vector2(0, -4000),  # Texte 9 (Y < -4000)
-	Vector2(0, -4800),  # Texte 10 (Y < -4800)
-	Vector2(0, -5600),  # Texte 11 (Y < -5600)
-	Vector2(0, -6500),  # Texte 12 (Y < -6500)
-	Vector2(0, -7500),  # Texte 13 (Y < -7500)
-	Vector2(0, -8500),  # Texte 14 (Y < -8500)
+	# Phase d'introduction au sol (déplacement horizontal)
+	Vector2(0, -150),   # Texte 3 : L'Apocalypse (Tout début de la montée)
+	Vector2(0, -300),   # Texte 4 : Sortie immédiate de la zone basse
+	Vector2(0, -500),   # Texte 5 : Premier palier de plateformes
+	Vector2(0, -700),   # Texte 6 : Ascension vers le premier tiers
+	Vector2(0, -900),   # Texte 7 : La pollution
+	Vector2(0, -1100),  # Texte 8 : Le vide commence
+	Vector2(0, -1300),  # Texte 9 : Les mutants (milieu du parcours)
+	Vector2(0, -1500),  # Texte 10 : Réflexion sur nous-mêmes
+	Vector2(0, -1700),  # Texte 11 : Le plastique dans les veines
+	Vector2(0, -1900),  # Texte 12 : La croissance infinie
+	Vector2(0, -2100),  # Texte 13 : Presque au sommet (Y=-2100)
+	Vector2(0, -2200),  # Texte 14 : Message final tout en haut !
 ]
 
 @export var text_duration = 5.0 # Un peu plus long pour laisser le temps de lire

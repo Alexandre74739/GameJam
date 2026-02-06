@@ -517,7 +517,7 @@ layer_1/tile_data = PackedInt32Array(65532, 0, 0, 65533, 0, 0, 65534, 0, 0, 6553
 
 [node name="Player" parent="." unique_id=1712431102 groups=["Player"] instance=ExtResource("3_kiuhd")]
 z_index = 2
-position = Vector2(670, -2175)
+position = Vector2(-72, -50)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1421777792]
 zoom = Vector2(6, 6)
@@ -760,5 +760,5 @@ position = Vector2(718, -2194)
 [node name="PlatformFroid2" parent="." unique_id=2086797455 instance=ExtResource("8_ljxil")]
 position = Vector2(718, -2232)
 
-[node name="Papa" parent="." unique_id=1451578834 instance=ExtResource("9_c58vp")]
-position = Vector2(506, -2288)
+[node name="Papa" parent="." unique_id=2094738634 instance=ExtResource("9_c58vp")]
+position = Vector2(513, -2338)
