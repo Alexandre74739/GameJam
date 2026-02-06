@@ -41,7 +41,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_25ls3"]
 size = Vector2(134, 34)
 
-[node name="Papa" type="Area2D" unique_id=1451578834]
+[node name="Papa" type="CharacterBody2D" unique_id=2094738634]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=593499252]
 position = Vector2(0.9999995, -3.4999995)

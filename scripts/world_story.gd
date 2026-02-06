@@ -26,21 +26,24 @@ extends Node2D
 # Les positions X ne comptent que pour les index 0, 1, 2.
 # À partir de l'index 3, seul le Y (négatif) déclenche le texte.
 @export var text_trigger_positions: Array[Vector2] = [
-	Vector2(200, 0),    # Texte 0 (X > 200)
-	Vector2(500, 0),    # Texte 1 (X > 500)
-	Vector2(800, 0),    # Texte 2 (X > 800)
-	Vector2(0, -200),   # Texte 3 (Y < -200)
-	Vector2(0, -600),   # Texte 4 (Y < -600)
-	Vector2(0, -1200),  # Texte 5 (Y < -1200)
-	Vector2(0, -1800),  # Texte 6 (Y < -1800)
-	Vector2(0, -2500),  # Texte 7 (Y < -2500)
-	Vector2(0, -3200),  # Texte 8 (Y < -3200)
-	Vector2(0, -4000),  # Texte 9 (Y < -4000)
-	Vector2(0, -4800),  # Texte 10 (Y < -4800)
-	Vector2(0, -5600),  # Texte 11 (Y < -5600)
-	Vector2(0, -6500),  # Texte 12 (Y < -6500)
-	Vector2(0, -7500),  # Texte 13 (Y < -7500)
-	Vector2(0, -8500),  # Texte 14 (Y < -8500)
+	# Phase d'introduction au sol (déplacement horizontal)
+	Vector2(150, 0),    # Texte 0 : Juste après avoir quitté Papa
+	Vector2(400, 0),    # Texte 1 : En approchant des premières marches
+	Vector2(700, 0),    # Texte 2 : Avant le premier grand saut vertical
+	
+	# Phase d'ascension (paliers verticaux basés sur ton design)
+	Vector2(0, -300),   # Texte 3 : "L'APOCALYPSE EST LÀ" (Premières plateformes)
+	Vector2(0, -800),   # Texte 4 : Sortie de la zone de départ
+	Vector2(0, -1500),  # Texte 5 : Premier tiers de la montée
+	Vector2(0, -2200),  # Texte 6 : Zone intermédiaire
+	Vector2(0, -3000),  # Texte 7 : La pollution devient visible
+	Vector2(0, -4000),  # Texte 8 : On commence à voir le vide en bas
+	Vector2(0, -5200),  # Texte 9 : Vers les plateformes isolées
+	Vector2(0, -6500),  # Texte 10 : La réflexion sur les mutants
+	Vector2(0, -7800),  # Texte 11 : L'air se raréfie
+	Vector2(0, -9200),  # Texte 12 : Approche de la fin
+	Vector2(0, -10500), # Texte 13 : Presque au sommet
+	Vector2(0, -12000), # Texte 14 : Le message final sur la Terre
 ]
 
 @export var text_duration = 5.0 # Un peu plus long pour laisser le temps de lire
