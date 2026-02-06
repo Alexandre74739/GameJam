@@ -44,8 +44,8 @@ func enemy_died():
 		var portal = get_tree().current_scene.find_child("Portal", true, false)
 		
 		if portal:
-			portal.appear() # On appelle la fonction créée plus haut
-			portal_unlocked = true
+			portal_unlocked = true  # D'ABORD on unlock
+			portal.appear()         # ENSUITE on affiche
 		else:
 			print("Erreur : Nœud 'Portal' introuvable dans la scène !")
 	
