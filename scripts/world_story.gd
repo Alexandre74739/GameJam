@@ -27,23 +27,18 @@ extends Node2D
 # À partir de l'index 3, seul le Y (négatif) déclenche le texte.
 @export var text_trigger_positions: Array[Vector2] = [
 	# Phase d'introduction au sol (déplacement horizontal)
-	Vector2(150, 0),    # Texte 0 : Juste après avoir quitté Papa
-	Vector2(400, 0),    # Texte 1 : En approchant des premières marches
-	Vector2(700, 0),    # Texte 2 : Avant le premier grand saut vertical
-	
-	# Phase d'ascension (paliers verticaux basés sur ton design)
-	Vector2(0, -300),   # Texte 3 : "L'APOCALYPSE EST LÀ" (Premières plateformes)
-	Vector2(0, -800),   # Texte 4 : Sortie de la zone de départ
-	Vector2(0, -1500),  # Texte 5 : Premier tiers de la montée
-	Vector2(0, -2200),  # Texte 6 : Zone intermédiaire
-	Vector2(0, -3000),  # Texte 7 : La pollution devient visible
-	Vector2(0, -4000),  # Texte 8 : On commence à voir le vide en bas
-	Vector2(0, -5200),  # Texte 9 : Vers les plateformes isolées
-	Vector2(0, -6500),  # Texte 10 : La réflexion sur les mutants
-	Vector2(0, -7800),  # Texte 11 : L'air se raréfie
-	Vector2(0, -9200),  # Texte 12 : Approche de la fin
-	Vector2(0, -10500), # Texte 13 : Presque au sommet
-	Vector2(0, -12000), # Texte 14 : Le message final sur la Terre
+	Vector2(0, -150),   # Texte 3 : L'Apocalypse (Tout début de la montée)
+	Vector2(0, -300),   # Texte 4 : Sortie immédiate de la zone basse
+	Vector2(0, -500),   # Texte 5 : Premier palier de plateformes
+	Vector2(0, -700),   # Texte 6 : Ascension vers le premier tiers
+	Vector2(0, -900),   # Texte 7 : La pollution
+	Vector2(0, -1100),  # Texte 8 : Le vide commence
+	Vector2(0, -1300),  # Texte 9 : Les mutants (milieu du parcours)
+	Vector2(0, -1500),  # Texte 10 : Réflexion sur nous-mêmes
+	Vector2(0, -1700),  # Texte 11 : Le plastique dans les veines
+	Vector2(0, -1900),  # Texte 12 : La croissance infinie
+	Vector2(0, -2100),  # Texte 13 : Presque au sommet (Y=-2100)
+	Vector2(0, -2200),  # Texte 14 : Message final tout en haut !
 ]
 
 @export var text_duration = 5.0 # Un peu plus long pour laisser le temps de lire
