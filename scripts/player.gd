@@ -83,7 +83,7 @@ func die():
 
 func reset_game():
 	$"/root/WaveManager".reset()
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://scenes/pagedead.tscn")
 
 # Assure-toi que ce signal est bien connecté dans l'éditeur
 func _on_attack_area_body_entered(body: Node2D) -> void:

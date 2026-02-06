@@ -645,15 +645,15 @@ follow_viewport_enabled = true
 [node name="BandeHaut" type="ColorRect" parent="scène intro/CanvasLayer" unique_id=1083351680]
 offset_left = 1790.0
 offset_top = -178.0
-offset_right = 2948.0156
+offset_right = 2948.0234
 offset_bottom = -94.0
 color = Color(0, 0, 0, 1)
 
 [node name="BandeBas" type="ColorRect" parent="scène intro/CanvasLayer" unique_id=1438789217]
 offset_left = 1792.0
 offset_top = 132.0
-offset_right = 2974.331
-offset_bottom = 214.42535
+offset_right = 2974.3306
+offset_bottom = 214.42574
 color = Color(0, 0, 0, 1)
 
 [node name="rideau_ouverture" type="ColorRect" parent="scène intro" unique_id=13346939]
