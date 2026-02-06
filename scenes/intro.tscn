@@ -545,10 +545,10 @@ tracks/17/path = NodePath("scène intro/musique_ennemis:volume_db")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
-"times": PackedFloat32Array(11.24, 28.601297, 31.26345, 32.369495),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(11.24, 30.873308),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [-15.748, -29.29, -46.082, -46.624]
+"values": [-15.748, -22.79]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_i2l1n"]
@@ -661,7 +661,7 @@ follow_viewport_enabled = true
 [node name="BandeHaut" type="ColorRect" parent="scène intro/CanvasLayer" unique_id=1083351680]
 offset_left = 1790.0
 offset_top = -178.0
-offset_right = 2948.0222
+offset_right = 2948.022
 offset_bottom = -94.0
 color = Color(0, 0, 0, 1)
 
@@ -669,7 +669,7 @@ color = Color(0, 0, 0, 1)
 offset_left = 1792.0
 offset_top = 132.0
 offset_right = 2974.333
-offset_bottom = 214.42593
+offset_bottom = 214.42595
 color = Color(0, 0, 0, 1)
 
 [node name="rideau_ouverture" type="ColorRect" parent="scène intro" unique_id=13346939]
