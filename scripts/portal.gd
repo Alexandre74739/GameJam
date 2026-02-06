@@ -1,27 +1,32 @@
 extends Area2D
 
+var portal_actif = false
+
 func _ready():
-	# AVANT : On cache tout au lancement du jeu
+	# Désactive le portail au démarrage
 	visible = false
-	# On désactive le monitoring pour ne pas changer de map par erreur
-	monitoring = false 
-	# Optionnel : désactive aussi le collider physiquement pour être sûr
-	$CollisionShape2D.set_deferred("disabled", true)
-	self.connect("body_entered", _on_body_entered)
+	monitoring = false
+	$CollisionShape2D.disabled = true
+	print("🚪 Portail créé (inactif)")
 
 func appear():
-	# APRÈS : Appelée par le WaveManager
+	# Active le portail quand appelé par WaveManager
 	visible = true
+	portal_actif = true
 	monitoring = true
-	# On réactive le collider pour que le joueur puisse entrer
-	$CollisionShape2D.set_deferred("disabled", false)
+	$CollisionShape2D.disabled = false
 	
-	# Lance l'animation si elle existe
-	if $AnimatedSprite2D.sprite_frames.has_animation("default"):
+	# Lance l'animation
+	if has_node("AnimatedSprite2D") and $AnimatedSprite2D.sprite_frames.has_animation("default"):
 		$AnimatedSprite2D.play("default")
 	
-	print("Portail activé visuellement et physiquement !")
+	print("✅ PORTAIL ACTIVÉ - Prêt à téléporter!")
 
-func _on_body_entered(body : Node2D):
-	if body.is_in_group("Player") and WaveManager.portal_unlocked: 
+func _on_body_entered(body):
+	# Affiche ce qui entre
+	print("🔍 Collision portail: ", body.name)
+	
+	# Si le portail est actif et que c'est un CharacterBody2D (le joueur)
+	if portal_actif:
+		print("🌀 TÉLÉPORTATION vers world_story.tscn")
 		get_tree().change_scene_to_file("res://scenes/world_story.tscn")

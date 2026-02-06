@@ -38,7 +38,7 @@ func enemy_died():
 	current_enemies_count -= 1
 	total_kills += 1
 	
-	# CONDITION DE LA PORTE : Apparition à 10 kills
+	# CONDITION DE LA PORTE : Apparition à 1 kill
 	if total_kills >= 1 and not portal_unlocked:
 		# On cherche le nœud "Portal" dans toute la scène active
 		var portal = get_tree().current_scene.find_child("Portal", true, false)
