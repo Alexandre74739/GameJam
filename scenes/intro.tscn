@@ -831,6 +831,7 @@ offset_bottom = 214.42609
 color = Color(0, 0, 0, 1)
 
 [node name="rideau_ouverture" type="ColorRect" parent="scène intro" unique_id=13346939]
+visible = false
 modulate = Color(0, 0, 0, 1)
 offset_left = 1552.0
 offset_top = -196.0
