@@ -12,7 +12,14 @@ func _process(delta: float) -> void:
 
 
 func _on_replaybtn_button_down() -> void:
+	# Enlever la pause et nettoyer avant de relancer
+	get_tree().paused = false
+	get_parent().queue_free()  # Supprimer le CanvasLayer
+	$"/root/WaveManager".reset()
 	get_tree().change_scene_to_file("res://scenes/game.tscn")
 
 func _on_menubtn_button_down() -> void:
+	# Enlever la pause et nettoyer avant de revenir au menu
+	get_tree().paused = false
+	get_parent().queue_free()  # Supprimer le CanvasLayer
 	get_tree().change_scene_to_file("res://scenes/menu_principal.tscn")

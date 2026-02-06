@@ -72,6 +72,12 @@ func die():
 	if is_dead: return 
 	is_dead = true
 	
+	# Jouer le son de game over
+	var sfx_game_over = AudioStreamPlayer.new()
+	sfx_game_over.stream = load("res://assets/sounds/son_game_over.mp3")
+	add_child(sfx_game_over)
+	sfx_game_over.play()
+	
 	velocity = Vector2.ZERO 
 	_animated_sprite.play("death") # Priorité absolue dans update_animations
 	
